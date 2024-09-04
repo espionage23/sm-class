@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{width: 800px; border: 1px solid black;}
+    
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h3>회원가입</h3>
+    <form action="" name="frm" method="get">
+      <label>이름</label>
+      <input type="text" name="name" id="name"><br/>
+      
+      <label>아이디</label>
+      <input type="text" name="id" id="id">
+      <button type="button">아이디 중복확인</button>
+      <br/>
+      
+      <label>비밀번호</label>
+      <input type="password" name="pw" id="pw"><br/>
+      
+      <label>비밀번호 확인</label>
+      <input type="password" name="pw2" id="pw2">
+      <span id="pwTxt">비밀번호가 일치합니다.</span>
+      <br/>
+      
+      <label>생년월일/성별</label>
+      <input type="date" name="birth" id="birth">
+      <input type="radio" name="gender" id="male">
+      <label for="male">남자</label>
+      <input type="radio" name="gender" id="female">
+      <label for="female">여자</label><br/>
+      
+      <label>이메일</label>
+      <input type="text" name="email1" id="email1">@
+      <input type="text" name="email2" id="email2">
+      <select name="email3" id="email3" onchange="echg()">
+        <option value="">직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="google.com">google.com</option>
+        <option value="daum.net">daum.net</option>
+      </select>
+      <button type="button">인증코드 발송</button>
+      <br/>
+      
+      <label>우편번호</label>
+      <input type="text" name="post" id="post">
+      <button type="button">주소검색</button>
+      <br/>
+      
+      <label>주소</label><br/>
+      <input type="text" name="address1" id="address1"><br/>
+      <input type="text" name="address2" id="address2"><br/>
+      <br/><br/>
+
+      <button type="button">회원가입</button>
+      <button type="button">취소</button>
+    </form>
+    </div>
+
+
+    <script> //이메일 주소
+      function echg(){
+        var email = document.getElementById("email3").value;  //select값을 변수(var)에 저장
+      if(email == ""){
+        document.getElementById("email2").readOnly = false; //읽기전용을 해제
+        document.getElementById("email2").value = "";  //이메일2 데이터를 삭제
+        document.getElementById("email2").focus(); //이메일2 input에 포커스 적용
+      }else{    //그 외 다른 건수들은~
+        document.getElementById("email2").value = email;  // select 값을 이메일2에 입력
+        document.getElementById("email2").readOnly = true; //읽기전용을 적용
+      }
+    }
+  </script>
+</body>
+</html>
