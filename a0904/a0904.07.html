@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <title>Document</title>
   <style>
     div{width: 800px; border: 1px solid black;}
-    
+    #pwTxt{font-weight: 700; }
+    .on{color: blue; }
+    .off{color: red;}
   </style>
 </head>
 <body>
@@ -24,9 +27,31 @@
       <label>비밀번호</label>
       <input type="password" name="pw" id="pw"><br/>
       
+      <script>
+        //함수선언
+        function pwCheck(){
+          //console.log("함수호출");
+          //console.log(document.getElementById("pw").value);
+          //console.log(document.getElementById("pw2").value);
+          var pw = document.getElementById("pw").value;
+          var pw2 = document.getElementById("pw2").value;
+          if(pw == pw2){
+            //console.log("비밀번호가 일치합니다.");
+            document.getElementById("pwTxt").innerText = "비밀번호가 일치합니다."
+            document.getElementById("pwTxt").classList.remove("off");
+            document.getElementById("pwTxt").classList.add("on");
+          }else{
+            // console.log("비밀번호가 일치하지 않습니다.");
+            document.getElementById("pwTxt").innerText = "비밀번호가 일치하지 않습니다."
+            document.getElementById("pwTxt").classList.remove("on");
+            document.getElementById("pwTxt").classList.add("off");
+          }
+        }
+      </script>
+
       <label>비밀번호 확인</label>
-      <input type="password" name="pw2" id="pw2">
-      <span id="pwTxt">비밀번호가 일치합니다.</span>
+      <input type="password" name="pw2" id="pw2" onkeyup="pwCheck()">
+      <span id="pwTxt"></span>
       <br/>
       
       <label>생년월일/성별</label>
@@ -49,8 +74,8 @@
       <br/>
       
       <label>우편번호</label>
-      <input type="text" name="post" id="post">
-      <button type="button">주소검색</button>
+      <input type="text" name="zipcode" id="zipcode">
+      <button type="button" onclick="addBtn()">주소검색</button>
       <br/>
       
       <label>주소</label><br/>
@@ -65,6 +90,17 @@
 
 
     <script> //이메일 주소
+      function addBtn(){
+        new daum.Postcode({
+        oncomplete: function(data) {
+          document.getElementById("zipcode").value = data.zonecode;     // 우편번호
+          document.getElementById("address1").value = data.address;     // 주소
+
+        }
+    }).open();
+      }
+      
+      
       function echg(){
         var email = document.getElementById("email3").value;  //select값을 변수(var)에 저장
       if(email == ""){
