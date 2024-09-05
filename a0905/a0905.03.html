@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h3{width: 300px; height: 100px; border: 1px solid black;
+       white-space: nowrap;        /* 줄단락을 없앰 */
+       overflow: hidden;          /* 테두리를 벗어난 것을 숨김 */
+       text-overflow: ellipsis;  /* 말줄임표 */
+    }
+
+    h3:hover{overflow: visible;      /* hover: 마우스 위에 올릴 때 반응하는 태그*/
+             white-space: normal;}
+
+    div{width: 300px; height: 100px; border: 1px solid black;
+    /*white-space: nowrap;*/
+
+    overflow: scroll;}
+    h2{width: 800px; height: 200px;
+      border: 1px solid black;
+      letter-spacing: 30px; /* 글자간격: 자간  */ 
+      word-spacing: 40px; /* 단어간격 */
+      text-decoration: underline;   /* line-through, overline, underline, none */
+      text-shadow: 35px 35px 5px #f00;  /* 폰트 그림자효과 */
+      font-size: 50px;
+      text-align: center; /* 글자 가운데 정렬 */
+      /* 글자 색상 */
+      color: rgb(0,0,0,0.8); /* rgb는 투명도 설정 가능 */
+      color: black;          /* 문자색상전용 */
+      color: #000000;        /* 16진수 코드 적용 */
+      line-height: 190px; /* 세로 가운데 정렬 */
+      margin: 0 auto;}  /* 사각모델 가운데 정렬 */
+
+   /* paading-top:60px; box-sizing: border-box; */ /* 세로 가운데 정렬  */
+
+    p{width: 400px; height: 500px; border: 1px solid black;
+    font-size: 17px; font-weight: 700; text-align: justify;
+    line-height: 60px;}  /* 줄간격 */
+  </style>
+</head>
+<body>
+  <h3>
+    남아프리카 지역에 위치한 내륙국. 감비아와는 다른 나라이다.
+  </h3>
+  <div>
+     남아프리카 지역에 위치한 내륙국. 감비아와는 다른 나라이다. 잠비아라는 이름은 이 나라의 남쪽 국경선을 따라 흐르는 잠베지강으로부터 유래했다.
+  </div>
+  <h2>글꼴 관련 스타일</h2>
+  <p>
+    남아프리카 지역에 위치한 내륙국. 감비아와는 다른 나라이다. 잠비아라는 이름은 이 나라의 남쪽 국경선을 따라 흐르는 잠베지강으로부터 유래했다.
+
+세계적인 구리 생산국이다. SK 최태원 회장이 잠비아의 대통령을 만난 이유도 구리 때문이며, 그 매장량 또한 세계적이다. 현재는 어느 정도 활발히 경제성장이 진행되어서 사정이 조금 나아졌지만 심각한 빈부 격차와 정치가들의 부정부패가 국가 발전의 걸림돌로 작용하고 있다.
+  </p>
+
+</body>
+</html>
