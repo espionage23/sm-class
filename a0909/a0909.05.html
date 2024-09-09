@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    #container{width: 800px; height: 800px;
+    border: 5px solid black;
+    margin: 50px auto;}
+
+    div{width: 200px; height: 200px; font-size: 30px;
+        text-align: center; position: relative;}
+    #d01{background: yellow; position: absolute; z-index:21;
+    left: 100px; top: 100px;}
+    #d02{background: green; position: absolute; z-index:10;
+    left: 200px; top: 200px;}
+    #d03{background: pink; position: absolute; z-index:20;
+    left: 250px; top: 150px;}
+    #d04{background: blue; position: absolute;}
+    #d05{background: gray; position: absolute;}
+    #d06{background: red; position: fixed; left: 0; top: 0;}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="d01">1</div>
+    <div id="d02">2</div>
+    <div id="d03">3</div>
+    <div id="d04">4</div>
+    <div id="d05">5</div>
+    <div id="d06">6</div>
+  </div>
+
+</body>
+</html>
