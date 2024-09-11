@@ -4,49 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>표만들기</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-    *{margin: 0; padding: 0;
+    *{margin:0; padding:0;
       font-family: "Noto Sans KR", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
-      font-style: normal;}
+      font-style: normal;
+    }
+    ul,ol{list-style: none;}
+    a { text-decoration: none; color:inherit;}
+
+    section{width:1200px; height:1000px; margin:50px auto 0; text-align: center;}
+    h1{text-align: center; font-size:40px; font-weight: 700; margin-bottom:30px;}
+    table,th,td{border-collapse: collapse; }
+    th,td{height:42px; }
+    th{  border-top:2px solid black; border-bottom:2px solid black;
+    font-size: 16px; font-weight: 700; background: #f3f3f3; }
+    td{border-bottom:1px solid silver; }
+    table{width:1200px; margin:0 auto; text-align: center;
+      border-top:2px solid black; border-bottom:2px solid black; 
+    }
+    td:nth-child(2){ text-align: left; padding-left:10px; }
+    .wrapper{width:380px; height:40px; margin:0 auto 30px;}
+    .wrapper select{width:80px; height:40px; border:1px solid #666;
+      background: url(images/search-box-select.png) no-repeat 90%;
+      appearance: none; padding:5px; box-sizing: border-box;
+    }
+    .wrapper input {width:200px; height:40px; font-size:16px; 
+      border:1px solid #666; padding-left:10px; box-sizing: border-box; 
+      position: relative; top:2px;
+    }
+    .wrapper button{width:40px; height:40px; background: #666; color:white;
+    border:none; font-size: 16px;
+    position: relative; top:2px;
+    }
+    .page-num{ margin-top:35px;
+      width:100%;
+      font-size: 16px; 
+      display: flex;
+      justify-content: center;
       
-      ul,ol{list-style: none;}
-      a{text-decoration: none; color: inherit;}
-      
-    section{width: 1200px; height: 1000px; margin: 50px auto; text-align: center;}
-    table,th,td{border-collapse: collapse;}
-    th, td{height: 42px;}
-    th{border-bottom: 2px solid black;
-    font-size: 16px; font-weight: 700; background: #f3f3f3;}
-    td{border-bottom: 1px solid silver;}
-    h1{text-align: center; font-size: 40px; font-weight: bold; margin-bottom: 30px;}
-    table{width: 1200px; margin: 0 auto; text-align: center; border-top: 2px solid black; border-bottom: 2px solid black;}
-    td:nth-child(2){text-align: left; padding-left: 10px;}
-
-    .wrapper{width: 380px; height: 40px; margin: 0 auto 30px;}
-    .wrapper select{width: 80px; height: 40px; border: 1px solid #666;
-    background: url(images/search-box-select.png) no-repeat 90%;
-    appearance: none; padding: 5px; box-sizing: border-box;}
-    .wrapper input{width: 200px; height: 40px; font-size: 16px; border: 1px solid #666; padding-left: 4px;
-    box-sizing: border-box; position: relative; top: 2px;}
-
-    .wrapper button{width: 40px; height: 40px; background: #666; color: white;
-    border: none; font-size: 16px; position: relative; top: 1px;}
-    
-    .page-num{width: 400px; margin: 35px auto; font-size: 16px; display: flex;}
-    .page-num li{width: 36px; height: 35px; border: 1px solid #989898; margin: 0 3px; line-height: 32px; box-sizing: border-box; }
-    .page-num .first{background: url(images/paging_first.png) no-repeat; border: none;}
-    .page-num .prev{background: url(images/paging_prev.png) no-repeat; border: none;}
-    .page-num .next{background: url(images/paging_next.png) no-repeat; border: none;}
-    .page-num .last{background: url(images/paging_last.png) no-repeat; border: none;}
-
-    .write a{width: 120px; height: 50px; float: right; border: 2px solid black; line-height: 50px;}
-
+    }
+    .page-num li{width:36px; height:35px; border:1px solid #989898;
+    margin:0 3px; line-height:32px; box-sizing: border-box;}
+    .page-num .first{background: url(images/paging_first.png) no-repeat; border:none; }
+    .page-num .prev{background: url(images/paging_prev.png) no-repeat; border:none; }
+    .page-num .next{background: url(images/paging_next.png) no-repeat; border:none; }
+    .page-num .last{background: url(images/paging_last.png) no-repeat; border:none; }
+    .write a {width:120px; height:50px; float:right; 
+    border:2px solid black; line-height: 50px;}
   </style>
 </head>
 <body>
@@ -56,8 +66,8 @@
         <li id="top_menu_1"><a href="#">회원가입</a></li>
         <li id="top_menu_2"><a href="#">로그인</a></li>
         <li id="top_menu_3"><a href="#">고객행복센터</a></li>
-        <li id="top_menu_4" ><a href="#">배송정보검색</a></li>
-        <li id="top_menu_5" ><a href="#">기프트카드 등록</a></li>
+        <li id="top_menu_4"><a href="#">배송정보검색</a></li>
+        <li id="top_menu_5"><a href="#">기프트카드 등록</a></li>
       </ul>
     </div>
     <nav>
@@ -91,7 +101,6 @@
   </header>
   <section>
     <h1>NOTICE</h1>
-
     <div class="wrapper">
       <form action="#" name="sFrm" method="get">
         <select name="category">
@@ -103,8 +112,8 @@
         <input type="text" name="search_txt" id="search_txt">
         <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-    </div>
 
+    </div>
     <table>
       <colgroup>
         <col width="10%">
@@ -115,7 +124,7 @@
       </colgroup>
       <thead>
         <tr>
-          <th>NO.</th>
+          <th>No.</th>
           <th>제목</th>
           <th>작성자</th>
           <th>작성일</th>
@@ -123,18 +132,18 @@
         </tr>
       </thead>
       <tbody id="tbody">
-
       </tbody>
     <script>
-      var data="";
+      var data = "";
       for(var i=1;i<=10;i++){
         data += "<tr>";
-        data += " <td>"+i+"</td>";
+        data += "<td>"+i+"</td>";
         data += "<td><a href='#'>예방관련 안내</a></td>";
         data += "<td>관리자</td>";
-        data += " <td>2024-09-10</td>";
+        data += "<td>2024-09-10</td>";
         data += "<td>100</td>";
         data += "</tr>";
+
       }
       document.getElementById("tbody").innerHTML = data;
     </script>
@@ -151,7 +160,7 @@
       <li class="last"></li>
     </ul>
     <div class="write"><a href="#">쓰기</a></div>
+    
   </section>
-
 </body>
 </html>
