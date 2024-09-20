@@ -4,233 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      text-decoration: inherit;
-      font-family: "Nanum Gothic", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    .body{
-      width: 650px;
-      height: 828px;
-      padding: 20px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-
-    .body .mesage_box{
-      width: 610px;
-      height: 122px;
-      background: #f8f8f8;
-      margin-bottom: 25px;
-      padding: 25px;
-      box-sizing: border-box;
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+    function calBtn(){
+      var length = document.getElementById("length").value;
+      var weight = document.getElementById("weight").value;
+      var length2 = length / 100;
+      var bmi = weight / (length2 * length2);
+      var bmi2 = bmi.toFixed(2);  // toFixed는 원하는 소수점 자리수를 입력하면 그만큽 보여줌
+      //bmi지수 데이터값
+      document.getElementById("bmiNumber").innerText = bmi2;
       
+      var resultText = "";
+      // bmi지수 판별값
+      if(bmi2 >= 25){
+        resultText = "비만"
+      }else if(bmi2 >= 23){
+        resultText = "과체중"
+      }else if(bmi2 >= 18.5){
+        resultText = "정상"
+      }else{
+        resultText = "저체중"
+      }
+
+      document.getElementById("resultText").innerText = resultText;
+
+
+
     }
 
-    .body .mesage_box span{
-      width: 560px;
-      height: 72px;
-      display: block;
-      color: #454545;
-      font-size: 14px;
-      letter-spacing: -0.03em;
-      line-height: 24px;
-    }
-
-
-    .form{
-      width: 610px;
-      height: 238px;
-      position: relative;
-      margin: -15px 0 30px;
-      padding: 25px;
-      border: 1px solid #e8e8e8;
-      box-sizing: border-box;
-    }
-
-    .form #bmiFrm .dash{
-      color: #b7b7b7;
-      margin: 0 15px;
-    }
-
-    .form #bmiFrm span{
-      font-size: 16px;
-    }
-
-    .form #bmiFrm{
-      width: 558px;
-      height: 27px;
-      color: #454545;
-    }
-
-    .form #bmiFrm label{
-      font-size: 15px;
-      font-weight: 700;
-      margin-right: 12px;
-    }
-
-    .form input{
-      width: 60px;
-      height: 27px;
-      margin-right: 5px;
-      padding: 0 6px;
-      text-align: center;
-      border: 1px solid #ddd;
-      vertical-align: middle;
-      box-sizing: border-box;
-    }
-
-    .form .compute{
-      position: absolute;
-      right: 25px;
-    }
-
-    .form .compute input:nth-child(1){
-      width: 70px;
-      height: 27px;
-      background: #0aaf6b;
-      color: #fff;
-      font-weight: 700;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .form .compute input:nth-child(2){
-      width: 70px;
-      height: 27px;
-      background: #656565;
-      color: #fff;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .clearfix{
-      margin: 10px 0 18px;
-      width: 558px;
-      height: 48px;
-    }
-    .clearfix::before{
-      content: "";
-      display: table;
-    }
-    .clearfix::after{
-      content: "";
-      display: table;
-    }
-
-    .clearfix dt{
-      width: 20%;
-      float: left;
-      display: inline-block;
-      font-size: 14px;
-    }
-    .clearfix dd{
-      width: 80%;
-      font-size: 14px;
-      font-weight: 700;
-      color: #eb4f4a;
-      float: left;
-      display: inline-block;
-    }
-
-    .form ul{
-      width: 558px;
-      box-sizing: border-box;
-    }
-
-    .form li{
-      height: 83px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .form li label{
-      display: inline-block;
-      width: 21%;
-      margin-right: 12px;
-      font-weight: 700;
-    }
-
-    .form .dv1{
-      width: 18.5%;
-    }
-
-    .form .dv2{
-      width: 14.5%;
-    }
-
-    .form li li{
-      float: left;
-      height: 35px;
-      color: #fff;
-      line-height: 35px;
-      text-align: center;
-    }
-
-    .form ul .clearfix{
-      width: 558px;
-      height: 35px;
-    }
-    .form ul .clearfix label{
-      display: inline-block;
-      height: 24px;
-      line-height: 24px;
-    }
-
-    .form .low-weight{
-      width: 25%;
-      background: #329ae3;
-    }
-    .form .regular{
-      width: 20%;
-      background: #95c520;
-    }
-    .form .overwhight{
-      width: 18%;
-      background: #ee942a;
-    }
-    .form .obesity{
-      width: 36.9%;
-      background: #f15232;
-    }
-
-    .pop-header{
-      width: 650px;
-      height: 54px;
-      
-      margin: 0 auto;
-      position: relative;
-      padding: 15px 20px 15px 40px;
-      border-bottom: 3px solid #e5e5e5;
-      background: url(images/bullet-h1.png) 20px 50% no-repeat;
-      background-color: #0aaf6b;
-    }
-    .pop-header h1{
-      font-size: 18px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .pop-header a{
-      position: absolute;
-      display: block;
-      width: 25px;
-      height: 25px;
-      top: 12px;
-      right: 15px;
-      background: url(images/btn-close.png) 50% 50% no-repeat;
-      text-indent: -9999px;
-    }
-
-  </style>
+    </script>
 </head>
 <body>
   <header class="pop-header">
@@ -253,15 +56,15 @@
         <input type="text" name="weight" id="weight">
         <span>kg</span>
         <span class="compute">
-          <input type="button" name="btnCalc" id="btnCalc" value="계산">
+          <input type="button" name="btnCalc" id="btnCalc" value="계산" onclick="calBtn()" >
           <input type="reset" value="초기화">
         </span>
       </form>
       <dl class="clearfix">
         <dt>비만도 결과</dt>
-        <dd id="resultText">정상 입니다</dd>
+        <dd id="resultText"></dd>
         <dt>BMI 지수</dt>
-        <dd id="bmiNumber">22.83</dd>
+        <dd id="bmiNumber"></dd>
       </dl>
       <ul>
         <li>
