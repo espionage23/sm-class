@@ -31,7 +31,7 @@
         //동의 체크가 모두 되어 있는지 확인
         var all_agree = document.querySelectorAll(".agree");
         for(var i=0;i<all_agree.length;i++){
-          if(!all_agree[i].checked){
+          if(!all_agree[i].checked){     // all_agree[i].checked가 false일 경우 !all_agree[i].checked는 true가 된다.
             console.log("체크가 되어 있지 않음");
             if(confirm("모두 동의를 하지 않으면 가입이 불가 도와줘?")){
             for(var j=0;j<all_agree.length;j++){
