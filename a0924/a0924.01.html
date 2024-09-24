@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function conBtn(){
+      alert("이얏호우");
+
+      //querySelector - id - #, class - ., 태그
+      // document.querySelector("#d01").innerText = "안녕하세요.";
+      console.log(document.querySelector(".con"));
+      document.querySelector(".con").style.color = "blue";  //쿼리에서는 클래스를 다 찾는게 아니라 맨 처음으로 오는것만 찾아준다.
+      console.log(document.querySelectorAll(".con"));  //쿼리올을 쓰면 배열로 전부 다 찾아준다.
+      var c_color = document.querySelectorAll(".con");
+      console.log(c_color);
+      for(var i=0;i<c_color.length;i++){
+        c_color[i].style.color = "blue";
+      }
+
+      document.querySelector("h2").style.color = "red";
+
+
+
+
+      //글자를 안녕하세요. 로 입력을 하시오.
+      //getElementById 요소
+      // document.getElementById("con").innerText = "hello";   // id면 찾지만 class일때는?
+      //getElementsByClassName 요소
+      // console.log(document.getElementsByClassName("con"));
+      // var c_color = document.getElementsByClassName("con");
+      // console.log(c_color);
+      // c_color[0].style.color = "red";
+      // for(var i=0;i<c_color.length;i++){
+      //   c_color[i].style.color = "red";
+      // }
+
+    }
+  </script>
+</head>
+<body>
+  <h1 class="con">제목</h1>
+  <h2 id="d01">부제목</h2>  <!--얘는 id가 안먹힘 왜냐? span에도 걸려있기때문에. class는 여러개 동시에 걸수 있지만 id는 안된다.-->
+  <div class="con">내용을 입력합니다.</div>
+  <p class="con">좋은하루</p>
+  <span>호호잇</span>
+  <button onclick="conBtn()">글자변경</button>
+
+
+</body>
+</html>
