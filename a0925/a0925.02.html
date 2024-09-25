@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <title>Document</title>
+  
+  <script>
+    //제이쿼리 구문
+    $(function(){
+
+      //슬라이드 열림
+      $(".btn1").click(function(){
+        $(".box").stop();
+        $(".box").slideDown(1000,"linear",function(){});
+      });
+
+      
+      //t슬라이드 닫침
+      $(".btn2").click(function(){
+        $(".box").stop();
+        $(".box").fadeOut(1000,"swing",function(){})
+        // $(".box").slideUp(1000,"linear",function(){});
+      });
+      
+      
+      //페이드 인
+      $(".btn3").on("click",function(){
+        $(".box").fadeIn(1000,"swing",function(){})
+      });
+
+      //toggle 효과
+      $(".btn4").on("click",function(){
+        $(".box").stop();
+        $(".box").slideToggle(300,"linear");
+      })
+
+        
+      // $("#in").on("mouseover focus",function(){
+      //   $(this).css({"border":"4px solid black","background":"yellow"});
+      // })
+      // $("#in").off("mouseover");
+
+      // $("#in").trigger("mouseover");/
+
+
+      // $("#in").mouseover(function(){
+      //   $(this).css({"border":"4px solid black","background":"yellow"})
+      // });
+      
+      // $("#in").focus(function(){
+      //   $(this).css({"border":"4px solid black","background":"yellow"})
+      // });
+      
+
+
+      // $("#in").mouseout(function(){
+      //   $(this).css({"border":"1px solid black","background":"none"})
+      // });
+
+
+    }); //제이쿼리 구문
+  </script>
+  <style>
+    .content{
+      width: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn1">슬라이드 펼침</button>
+  <button class="btn2">슬라이드 닫침</button>
+  <button class="btn3">페이드 In</button>
+  <button class="btn4">toggle</button>
+  <br>
+  <div class="box">
+    <div class="content">
+      넷플릭스의 예능 프로그램 '흑백요리사'가 글로벌 순위 1위에 올랐습니다.
+      요리 예능에 대한 뜨거운 관심이 요식업계에도 퍼지고 있습니다.
+      [백종원/'흑백요리사' 심사위원 : 오로지 맛에만 중점을 두도록 하겠습니다.]
+      지난 17일 공개된 이 프로그램은 재야의 요리 고수들이 최고의 스타 셰프들에게 도전하는 요리 경연을 다룹니다.
+      방송 직후부터 국내에서 인기를 끌더니 넷플릭스 비영어 부문 TV 시리즈 글로벌 1위를 했습니다.
+      한국뿐 아니라 싱가포르와 홍콩에서 1위, 18개 나라에서 순위권에 올랐습니다.
+      해외 리뷰에서도 "한국 요리의 다양성을 보여주는 것이 마음에 든다", "내가 본 최고의 요리 쇼 중에 하나"라는 호평이 이어집니다.
+      프로그램의 인기는 출연한 요리사들의 식당에도 이어졌습니다.
+      식당 예약 앱은 발 빠르게 출연자들의 식당을 정리해 마케팅에 활용했고, 인기 식당은 이미 예약이 꽉 찰 정도입니다.
+      '망해가던 요식업을 살렸다'는 평가까지 나옵니다.
+      다음 달 8일까지 총 12부의 에피소드가 공개될 예정인데 시청자들의 관심은 점점 더 커지고 있습니다.
+      [화면출처 IMDb, 넷플릭스·캐치테이블]
+    </div>
+  </div>
+
+  
+
+
+</body>
+</html>
