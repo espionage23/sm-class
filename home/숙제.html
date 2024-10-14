@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/board.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>포레스트 리솜</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/"><img src="images/logo_pc.png"></a>
+      </div>
+      <div class="nav_wrap">
+        <div class="quick_menu">
+          <ul>
+            <li><a href="#">회원예약</a></li>
+            <li><a href="#">패키지 예약</a></li>
+            <li><a href="#">부대시설 예약</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+        <script>
+          function m_over(){
+            document.querySelector(".navibg").style.display='block';
+          }
+
+          function m_leave(){
+            document.querySelector(".navibg").style.display='none';
+          }
+       </script>
+        <div class="menu" onmouseover="m_over()" onmouseleave="m_leave()" >
+          <ul>
+            <li><a href="#">포레스트</a></li>
+            <li><a href="#">스파&찜질방</a></li>
+            <li><a href="#">객실</a></li>
+            <li><a href="#">특별한 경험</a></li>
+            <li><a href="#">세미나 & 연회</a></li>
+            <li><a href="#">브랜드소개</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- * 하부메뉴부분 들어감 -->
+  <div class="navibg"></div>
+
+  <!--서브배너-->
+  <div class="sub_banner"></div>
+
+  <div class="sub_naviloc">HOME <i class="fa-solid        fa-chevron-right"></i> 포레스트 <i class="fa-solid fa-chevron-right"></i> 로그인
+  </div>
+
+  <!--회원가입 배너-->
+  <section id="sign_up">
+
+
+    <div class="sub_top_area">
+      <h3>회원가입</h3>
+    </div>
+
+    <div class="join_step_box">
+      <ul>
+        <li>
+          <span>STEP.1</span>
+          <p>약관동의</p>
+        </li>
+        <li>
+          <span>STEP.2</span>
+          <p>회원정보</p>
+        </li>
+        <li>
+          <span>STEP.3</span>
+          <p>회원가입 완료</p>
+        </li>
+      </ul>
+    </div>
+
+    <h4>
+      필수 정보 입력
+      <span>(* 항목은 필수 항목 입니다.)</span>
+    </h4>
+      
+    <fieldset id="join">
+      <dl id="join_name_dl">
+        <dt>
+          <div></div>
+          <label for="name">이름</label>
+        </dt>
+        <dd>
+          <input type="text" id="name" name="name" required>
+        </dd>
+      </dl>
+      <dl id="join_id_dl">
+        <dt>
+          <div></div>
+          <label for="id">아이디</label>
+        </dt>
+        <dd>
+          <input type="text" id="id" name="id" required>
+        </dd>
+          
+
+      </dl>
+    </fieldset>  
+      
+      
+  </section>
+
+
+  <!-- footer 부분  -->
+  <footer>
+    <div class="footer">
+      <div class="ftnavi">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">오시는길</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">영상정보처리기기운영관리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+        <div class="addr">
+          <p class="add">포레스트 리솜 <span>|</span>충청북도 제천시 백운면 금봉로 365</p>
+          <p class="tel">대표번호 : 043-649-6000<span></span>
+            예약문의 : 1600-0060<span></span>
+            단체문의 : 02--6177-5999<span></span>
+            분양문의 : 02-567-5555<span></span>
+            통신판매업신고 : 2011-충북제천-0016호
+            
+          </p>
+          <p class="info">메리츠화재와 개인정보 배상책임보험 계약을 체결하여 회원 개인정보를 보호하고 있습니다.</p>
+          <p class="copy">COPYRIGHT(C) HOBAN HOTEL & RESORT. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="sns">
+          <a href="#"><img src="images/insta_btn.png"></a>
+          <a href="#"><img src="images/youtube_btn_fnew.png"></a>
+          <a href="#"><img src="images/facebook_btn_fnew.png"></a>
+          <a href="#"><img src="images/kakao_ch_btn_fnew.png"></a>
+        </div>
+        <div class="group">
+          <select name="site_go" id="site_go" class="sel_box">
+            <option value="#">패밀리사이트</option>
+            <option value="https://www.ihoban.co.kr/web">호반건설</option>
+            <option value="https://www.hobanapt.co.kr/web">호반베르디움</option>
+          </select>
+          <button type="button">GO</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
