@@ -3,6 +3,8 @@ cart = []
 m_keys = ['id','pw','name','nicName','adress','money']
 c_keys = ['cartNo','name','pCode','pName','price','date']
 
+
+# csv 전환후 딕셔너리
 f = open('member.txt','r',encoding='utf-8')
 while True:
   line = f.readline()
@@ -12,14 +14,9 @@ while True:
   member.append(dict(zip(m_keys,m)))
   # print(line.strip())
 print(member)
-
-product = [
-  {"no":1, "pCode":"t001", "pName":"삼성TV", "price":2000000, "color":"black"},
-  {"no":2, "pCode":"g001", "pName":"LG냉장고", "price":3000000, "color":"white"},
-  {"no":3, "pCode":"h001", "pName":"하만카돈스피커", "price":500000, "color":"gray"},
-  {"no":4, "pCode":"w001", "pName":"세탁기", "price":1000000, "color":"yellow"},
-]
-
+#------------------------------------
+cartNo = 0
+cart = []
 # f = open('cart.txt','w',encoding='utf-8')
 # while True:
 #   line = f.readline()
@@ -30,8 +27,17 @@ product = [
 #   cart.append(dict(zip(c_keys,c)))
 
 
-product = []
 
+
+product = [
+  {"no":1, "pCode":"t001", "pName":"삼성TV", "price":2000000, "color":"black"},
+  {"no":2, "pCode":"g001", "pName":"LG냉장고", "price":3000000, "color":"white"},
+  {"no":3, "pCode":"h001", "pName":"하만카돈스피커", "price":500000, "color":"gray"},
+  {"no":4, "pCode":"w001", "pName":"세탁기", "price":1000000, "color":"yellow"}
+]
+
+session_info = {}
+p_title = ["번호","아이디","이름","상품코드","상품명","가격","구매일자"]
 
 
 ### -------- 함수 선언 -----------###
@@ -71,7 +77,12 @@ while True:
 
   if choice == 1:
     print(f"{product[choice-1]['pName']} 룰 구매하셨습니다.")
+    print("구매내역에 저장합니다.")
     print()
+    #로그인 정보 - session_info
+    c = {"cno":cartNo+1, "id":session_info['id'],"name":session_info['name'],"pCode":product[choice-1]['pCode'],"pName":product[choice-1]['pName'],"price":product[choice-1]['price']}
+    session_info['money'] = product['choice']
+
     
 
 #### ----------- 프로그램 끝 -------------- ###

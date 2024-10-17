@@ -48,6 +48,8 @@ p_title = ["번호","아이디","이름","상품코드","상품명","가격","�
 
 
 ### 함수선언 ###
+
+# 구매함수
 def buy(choice,cartNo):
   print(f"{product[choice-1]['pName']} 를 구매하셨습니다.")
   print("구매내역에 등록합니다.")
