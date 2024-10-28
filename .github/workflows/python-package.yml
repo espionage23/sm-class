@@ -53,7 +53,7 @@ jobs:
     # 커밋
     - name : commits
       run: |
-        git config --global user.mail "zalstmd23@naver.com"
+        git config --global user.email "zalstmd23@naver.com"
         got config --global user.name "Kim"
         # csv, txt 파일 추가
         git add news.txt
