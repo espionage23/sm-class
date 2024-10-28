@@ -54,7 +54,7 @@ jobs:
     - name : commits
       run: |
         git config --global user.email "zalstmd23@naver.com"
-        got config --global user.name "Kim"
+        git config --global user.name "Kim"
         # csv, txt 파일 추가
         git add news.txt
         git commit -m "최신 뉴스 모음"
