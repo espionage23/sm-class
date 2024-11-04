@@ -154,7 +154,7 @@ update board set btitle='제목을 다시 변경' where bno=14;
 
 commit;
 
---drop table board;
+drop table board;
 
 create table board(
 bno number(4),
@@ -171,7 +171,7 @@ bdate date           -- 등록을
 select board_seq.currval from dual;
 
 insert into board values(
-board_seq.nextval,'제목1','내용1','aaa',board_seq.currval,0,0,1,sysdate
+board_seq.nextval,'제목4','내용4','ddd',board_seq.currval,0,0,1,sysdate
 );
 
 select * from board;

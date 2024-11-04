@@ -236,7 +236,7 @@ insert into board values(
 board_seq.nextval,'제목2','내용2','bbb',board_seq.currval,0,0,0,sysdate,''
 );
 insert into board values(
-board_seq.nextval,'제목5','내용5','ddd',board_seq.currval,0,0,0,sysdate,''
+board_seq.nextval,'제목5','내용5','eee',board_seq.currval,0,0,0,sysdate,''
 );
 commit;
 
