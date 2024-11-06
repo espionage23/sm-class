@@ -14,10 +14,10 @@ while True:
     stu_func.stu_output()
 
   elif choice == "3":
-    stu_func.stu_search()
+    stu_func.stu_select()
 
   elif choice == "4":
-    stu_func.stu_array()
+    stu_func.stu_sort()
       
   elif choice == "5":
     stu_func.stu_rank()
@@ -25,3 +25,5 @@ while True:
   elif choice == "0":
     print("프로그램을 종료합니다.")
     break
+
+
