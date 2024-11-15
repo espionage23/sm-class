@@ -1,0 +1,104 @@
+ip: 네트워크 컴퓨터 주소
+dns(domain name system) : 도메인 주소를 ip 주소로 변환    www.naver.com -> 211.1.1.2  요런식임
+
+pip install --upgrade pip
+
+[디장고 설치]
+pip install Django
+
+[디장고 업그레이드]
+pip install Django --upgrade
+
+[디장고 위치확인]
+python -c "import django; print(django.__path__)"
+
+*** 디장고 프로젝트
+[ 프로젝트 생성 ]
+django-admin startproject tempPjt
+예)
+django-admin startproject shopmall
+django-admin startproject naverProject
+django-admin startproject kt
+django-admin startproject sktelecom
+
+[ 애플리케이션 생성]
+-- manage.py 사용
+python manage.py startapp students
+
+[ 프로젝트 이름 변경 ]
+-- project 폴더에서 실행
+move tempPjt tempProject
+
+[ DB 테이블 설치 ]
+python manage.py migrate
+-- db에 table설치,변경,삭제,추가 있는지 확인
+python manage.py makemigrations
+-- 관리자 등록
+python manage.py createsuperuser
+-- 서버 구동
+python -u manage.py runserver 0.0.0.0:8000
+브라우저 url
+http://127.0.0.1:8000/
+관리
+http://127.0.0.1:8000/admin
+
+-- 한국어 setting
+LANGUAGE_CODE = 'ko-kr'
+TIME_ZONE = 'Aisa/Seoul'
+
+----------------------------------------
+db
+ORM : 객체(object)와 db의 테이블을 자동으로 연결(mapping)시켜 rdb 테이블을 객체 지향적으로 사용하게 해주는 기술
+
+[ model ORM 명령어 ]
+
+* 입력 - insert *
+qs = Student(s_name='홍길동',s_major='컴퓨터공학',s_grade=1,s_age=20,s_gender='M')
+qs.save()
+
+-- create : qs.save() 저장이 됨.
+Student.objects.create(s_name='홍길동',s_major='컴퓨터공학',s_grade=1,s_age=20,s_gender='M')
+
+* 검색 - select *
+-- 전체 검색
+qs = Student.objects.all()
+qs[0]
+qs[1]
+-- 부분 검색
+qs= Student.objects.get(s_name='홍길동')
+Student 객체타입 | qs.s_name
+qs= Student.objects.filter(s_name='홍길동')
+QuerySet 1개가 넘어와도 리스트 형태 | qs[0].s_name
+
+-- 비교 검색
+__lt : 보다 작다
+__lte : 보다 작거나 같다
+__gt : 보다 크다
+__gte : 보다 크거나 같다
+__isnull : null인 자료 검색
+__contains : 특정 문자열 포함
+__startwith : 특정 문자열로 시작
+__endwith : 특정 문자열로 끝남
+qs = Student.objects.filter(s_age__lt=22)
+s = Student.objects.filter(s_name__contains='순')
+
+* 수정 - update *
+- 해당 데이터 검색 후, 컬럼에 값을 입력하면 수정된다.
+qs = Student.objects.get(s_name='홍길동')
+qs.s_age = 22
+qs.save()
+
+* 삭제 - delete *
+qs = Student.objects.get(s_name='홍길동')
+qs.delete()
+or
+Student.objects.get(s_name='홍길동').delete()
+
+------------------------------------
+Template Language
+
+- Template 태그 : {%문법%}
+- Template 변수 : {{변수}}
+- Template 필터 : {{변수|옵션}}
+
+- {%csrf_token%} : csrf 공격 방지를 위한 태그, 장고 내부적으로 csrf 토큰값의 유효성을 검증.
