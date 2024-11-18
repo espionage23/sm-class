@@ -52,6 +52,8 @@ ORM : 객체(object)와 db의 테이블을 자동으로 연결(mapping)시켜 rd
 
 [ model ORM 명령어 ]
 
+python .\manage.py shell 진입
+
 * 입력 - insert *
 qs = Student(s_name='홍길동',s_major='컴퓨터공학',s_grade=1,s_age=20,s_gender='M')
 qs.save()
@@ -102,3 +104,17 @@ Template Language
 - Template 필터 : {{변수|옵션}}
 
 - {%csrf_token%} : csrf 공격 방지를 위한 태그, 장고 내부적으로 csrf 토큰값의 유효성을 검증.
+
+-----------------------------------
+context : views.py 데이터를 html로 전달하는 변수
+html에서 views.py로 데이터를 전달 : 
+1. form
+2. app_name url
+ex )
+<td><a href="{% url 'students:sview' s.name %}">{{s.name}} </a></td>
+3. url
+
+1. 프로젝트 생성
+2. app  생성 students, home, board
+3. 각각 페이지 생성
+4. students- write.html, list.html, view.html
