@@ -52,7 +52,7 @@ ORM : 객체(object)와 db의 테이블을 자동으로 연결(mapping)시켜 rd
 
 [ model ORM 명령어 ]
 
-python .\manage.py shell 진입
+python manage.py shell 진입
 
 * 입력 - insert *
 qs = Student(s_name='홍길동',s_major='컴퓨터공학',s_grade=1,s_age=20,s_gender='M')
@@ -115,6 +115,9 @@ ex )
 3. url
 
 1. 프로젝트 생성
-2. app  생성 students, home, board
-3. 각각 페이지 생성
+2. app  생성 students, home, member
+3. students - crud 작업
 4. students- write.html, list.html, view.html
+
+- jquery 최신
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
