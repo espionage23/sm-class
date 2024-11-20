@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원옵션</title>
+</head>
+<body>
+  <h2>회원옵션</h2>
+  <form action="{% url 'member:m2' %}" method="post" name="loginfrm">
+    {% csrf_token %}
+    <labe>회원권번호</labe>
+    <input type="text" name="memberId" id="memberId" value="{{m_memberId}}"><br> <!-- 111, 1000000, no1-->
+    <labe>금액</labe>
+    <input type="text" name="money" id="money" value="{{m_money}}"><br>
+    <labe>옵션</labe>
+    <input type="text" name="option" id="option" value="{{m_option}}"><br>
+    <input type="checkbox" name="saveMember" value='1' id="saveMember" {% if m_memberId %}checked{%endif%}>
+    <label for='saveMember'>회원정보저장</label><br>
+    <input type="submit" value="회원가입">
+  </form>
+</body>
+</html>
