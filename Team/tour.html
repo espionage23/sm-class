@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <!-- Google Tag Manager -->
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NM9BB2M');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8"/>
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+  <meta content="Discover Incheon, 인천투어(itour)ㅣ인천 여행 정보" name="title"/>
+  <meta content="인천을 즐기는 다양한 방법을 소개합니다! 친환경 인천섬과 과거·현재·미래가 공존하는 원도심, 인천 지역 맛집과 야간 명소, 자연과 함께하는 웰니스관광지까지 인천투어가 제공합니다." name="description"/>
+  <meta content="인천투어, itour, 인천여행, 인천관광, 인천 가볼만한 곳, 인천맛집, 인천웰니스관광, 인천 힐링 여행, 인천 볼거리, 인천 섬, 인천 관광지, 인천 테마 여행 추천,  인천 갈만한 곳, 인천관광지, 인천놀거리" name="keywords"/>
+  <link href="https://itour.incheon.go.kr/main/main.do" rel="canonical"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Discover Incheon, 인천투어(itour)ㅣ인천 여행 정보" id="ogtitle" property="og:title"/>
+  <meta content="인천을 즐기는 다양한 방법을 소개합니다! 친환경 인천섬과 과거·현재·미래가 공존하는 원도심, 인천 지역 맛집과 야간 명소, 자연과 함께하는 웰니스관광지까지 인천투어가 제공합니다." property="og:description"/>
+  <meta content="https://itour.incheon.go.kr" id="ogUrl" property="og:url"/>
+  <meta content="Discover Incheon, 인천투어(itour) 메인" property="og:site_name"/>
+  <meta content="/images/logo.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Discover Incheon, 인천투어(itour)ㅣ인천 여행 정보" name="twitter:title"/>
+  <meta content="인천을 즐기는 다양한 방법을 소개합니다! 친환경 인천섬과 과거·현재·미래가 공존하는 원도심, 인천 지역 맛집과 야간 명소, 자연과 함께하는 웰니스관광지까지 인천투어가 제공합니다." name="twitter:description"/>
+  <meta content="/images/logo.jpg" name="twitter:image"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!--naver search advisor -->
+  <meta content="b89695d7ce59fd16be46b33c7c91502fbd3c490f" name="naver-site-verification"/>
+  <!--google search advisor -->
+  <meta content="keupPaN4Zpp7wyJbB-m3n5LUc0_pzpnR4W5tOzHUlhk" name="google-site-verification"/>
+  <title>
+   인천투어 홈
+  </title>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/css/style.css?ver=8" rel="stylesheet"/>
+  <script src="/js/lib/jquery/jquery-3.5.1.min.js" type="text/javascript">
+  </script>
+  <script src="/js/lib/slick.min.js" type="text/javascript">
+  </script>
+  <script src="/js/lib/ui.js" type="text/javascript">
+  </script>
+  <script src="/js/lib/comm.js" type="text/javascript">
+  </script>
+ </head>
+ <body class="main">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NM9BB2M" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="accessibility">
+   <a href="#main_visual">
+    본문 바로가기
+   </a>
+   <a href="#lnbNav">
+    주메뉴 바로가기
+   </a>
+  </div>
+  <header class="header">
+   <div class="lnb">
+    <!-- lnb -->
+    <script type="text/javascript">
+     $(document).ready(function(){
+		// 통합검색    
+		$("#top_btn_intgrfind").click(function(){
+			fnIntgrFind(); 
+		});   
+
+		$("#ipt_lnb_intgrfind_kword").keyup(function(e){		
+			if(e.keyCode == 13){
+				fnIntgrFind();
+			}        
+		});       
+
+		$(".menu_last").focusout(function(){
+			
+			$(".lnb_nav .depth2").stop().slideUp();
+		     $(".nav_bg").slideUp();
+		     $('.lnb_nav_wrap').find("li").removeClass("hover");
+		});  
+		
+		$("#language_last").focusout(function(){
+		
+			 $(".language .list").removeClass('active');
+			 $(".language .gnb_site .list a").attr("tabindex","-1");
+		});
+	});      
+  
+	function fnIntgrFind(){
+		if(gfn_chkNvl($("#ipt_lnb_intgrfind_kword").val())){
+			alert("검색어를 입력해 주세요.");
+			$("#ipt_lnb_intgrfind_kword").focus();
+			return;
+		}
+
+		if($("#ipt_lnb_intgrfind_kword").val().length<2){
+			alert("2글자이상 입력해주세요");
+			$("#ipt_lnb_intgrfind_kword").focus();
+			return;
+		}	
+		
+		if($("#ipt_lnb_intgrfind_kword").val().length>20){
+			alert("20글자까지만 검색할 수 있습니다. ");
+			$("#ipt_lnb_intgrfind_kword").focus();
+			return;
+		}	
+		
+		if(!checkUID($("#ipt_lnb_intgrfind_kword").val())){
+			alert("특수문자는 사용할수 없습니다.");
+			$("#ipt_lnb_intgrfind_kword").val("");
+			$("#ipt_lnb_intgrfind_kword").focus();
+			return;
+		}		
+			$("#lnb_ipt_intgrfind_kword").val($("#ipt_lnb_intgrfind_kword").val());
+			$("#topformSearch").attr("action","/intgrfind/list.do");
+			$("#topformSearch").submit();
+	}
+    </script>
+    <div class="nav_bg">
+    </div>
+    <div class="wrap">
+     <h1 class="logo">
+      <a class="logo_link" href="/">
+       인천투어
+      </a>
+     </h1>
+     <nav class="lnb_nav_wrap" id="lnbNav">
+      <h2 class="blind">
+       주메뉴
+      </h2>
+      <ul class="lnb_nav">
+       <li class="lnb_nav_item n1">
+        <!-- 메뉴 순서 추가 n1m, n2, ..... -->
+        <a class="lnb_nav_link" href="/thmtour/rcmdtour/list.do">
+         <span>
+          테마여행
+         </span>
+        </a>
+        <ul class="depth2">
+         <li>
+          <a href="/thmtour/rcmdtour/list.do">
+           <span>
+            추천여행 30선
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/thmtour/thmtour/list.do">
+           <span>
+            테마별 여행
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/thmtour/vrtour/list.do">
+           <span>
+            VR투어
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourrsve/wellness/html.do">
+           <span>
+            웰니스관광
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/thmtour/cardnews/list.do">
+           <span>
+            카드뉴스
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="lnb_nav_item n2">
+        <a class="lnb_nav_link" href="/ssst/ssst/list.do?pageNm=sgpl">
+         <span>
+          여행지
+         </span>
+        </a>
+        <ul class="depth2">
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=sgpl">
+           <span>
+            관광지
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=nature">
+           <span>
+            자연
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=leport">
+           <span>
+            레포츠
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=shpp">
+           <span>
+            쇼핑
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=food">
+           <span>
+            음식
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=stayng">
+           <span>
+            숙박
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/ssst/ssst/list.do?pageNm=fstv">
+           <span>
+            축제
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="lnb_nav_item n3">
+        <a class="lnb_nav_link" href="/areatour/areatour/list.do?pageCd=1">
+         <span>
+          지역별여행
+         </span>
+        </a>
+        <ul class="depth2">
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=1">
+           <span>
+            개항장 · 월미도
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=2">
+           <span>
+            송도 · 영종도
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=3">
+           <span>
+            강화도(교동도, 석모도)
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=4">
+           <span>
+            경인아라뱃길 · 청라
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=5">
+           <span>
+            원도심
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/areatour/areatour/list.do?pageCd=6">
+           <span>
+            인천의 섬
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="lnb_nav_item n4">
+        <a class="lnb_nav_link" href="/tourrsve/metrip/list.do">
+         <span>
+          여행준비
+         </span>
+        </a>
+        <ul class="depth2">
+         <li>
+          <a href="/tourrsve/metrip/list.do">
+           <span>
+            나만의 인천 여행
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourrsve/gdbook/list.do">
+           <span>
+            가이드북&amp;지도
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://culture-tour.incheon.go.kr/ctgMain.do" target="_blank">
+           <span>
+            문화관광해설사
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://citytour.ito.or.kr" target="_blank">
+           <span>
+            인천시티투어
+           </span>
+          </a>
+         </li>
+         <!--  <li><a href="/tourrsve/sitseepdt/list.do"><span>관광상품</span></a></li> -->
+         <!--  <li><a href="https://www.ictourpass.co.kr" target="_blank"><span>인천투어패스</span></a></li> -->
+         <li>
+          <a href="https://m.incheoneasy.com" target="_blank">
+           <span>
+            인천e지
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="lnb_nav_item n5">
+        <a class="lnb_nav_link" href="/tourinfo/ntbd/list.do">
+         <span>
+          여행정보
+         </span>
+        </a>
+        <ul class="depth2">
+         <li>
+          <a href="/tourinfo/ntbd/list.do">
+           <span>
+            공지사항
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourinfo/evnt/list.do">
+           <span>
+            이벤트
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourinfo/trfc/sitsee.do">
+           <span>
+            교통
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourinfo/gallery/list.do">
+           <span>
+            인천여행 갤러리
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourinfo/trsmic/html.do">
+           <span>
+            관광안내소
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://culture-tour.incheon.go.kr/Lgin/monLoginUsr.do" target="_blank">
+           <span>
+            관광모니터
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="/tourinfo/tourgoods/html.do">
+           <span>
+            관광기념품
+           </span>
+          </a>
+         </li>
+         <li class="menu_last">
+          <a href="https://www.incheon.go.kr/citybrand/CB020904" target="_blank">
+           <span>
+            도시브랜드기념품
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+     <div class="language">
+      <div class="gnb_site">
+       <button class="btn" type="button">
+        한국어
+       </button>
+       <ul class="list">
+        <li>
+         <a href="http://eng-itour.incheon.go.kr?xndjdlscjs=1" tabindex="-1">
+          English
+         </a>
+        </li>
+        <li>
+         <a href="http://jap-itour.incheon.go.kr?xndjdlscjs=1" tabindex="-1">
+          日本語
+         </a>
+        </li>
+        <li id="language_last">
+         <a href="http://chn-itour.incheon.go.kr?xndjdlscjs=1" tabindex="-1">
+          中文
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <form id="topformSearch" method="post" name="topformSearch">
+      <input id="lnb_ipt_intgrfind_kword" name="ipt_intgrfind_kword" type="hidden"/>
+     </form>
+     <div class="lnb_search">
+      <h2 class="blind">
+       통합검색
+      </h2>
+      <!-- <div style="display:none">
+            		<input type="text" class="text" title="">
+            	</div> -->
+      <fieldset>
+       <legend>
+        통합검색
+       </legend>
+       <div class="search_wrap">
+        <label class="blind" for="ipt_lnb_intgrfind_kword">
+         검색어 입력
+        </label>
+        <input class="text" id="ipt_lnb_intgrfind_kword" name="ipt_lnb_intgrfind_kword" placeholder="검색어를 입력해 주세요." title="검색어" type="search"/>
+        <input class="search_submit" id="top_btn_intgrfind" type="button" value="검색"/>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+   </div>
+  </header>
+  <script src="/js/lib/instafeed.min.js" type="text/javascript">
+  </script>
+  <script src="/js/main/main.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var tagListJson = ["힐링하기좋은","섬여행","가족과함께","인천대공원","인천주말여행","야경감상하기좋은","겨울여행","겨울","인생샷은여기서"];
+  </script>
+  <main class="main-container" id="mainContent">
+   <section class="main_visual" id="main_visual">
+    <h2 class="blind">
+     메인 비주얼
+    </h2>
+    <div class="list">
+     <div class="item">
+      <a class="link" href="https://itour.incheon.go.kr/tourinfo/evnt/detail.do?bbsNo=56297" style="background-image: url(/main/viewImg.do?imgId=419)">
+       <span class="blind">
+        인천투어 홈페이지 이용만족도 설문조사 이벤트
+       </span>
+      </a>
+     </div>
+     <div class="item">
+      <a class="link" href="https://itour.incheon.go.kr/thmtour/thmtour/detail.do?cotId=ITA24111416291127897" style="background-image: url(/main/viewImg.do?imgId=421)">
+       <span class="blind">
+        인천 신규 웰니스관광지 5
+       </span>
+       <span class="text">
+        인천 신규 웰니스관광지 5
+       </span>
+      </a>
+     </div>
+     <div class="item">
+      <a class="link" href="https://itour.incheon.go.kr/thmtour/thmtour/detail.do?cotId=ITA24110413095799077" style="background-image: url(/main/viewImg.do?imgId=411)">
+       <span class="blind">
+        11월엔 텍스트힙 충전!
+       </span>
+       <span class="text">
+        11월엔 텍스트힙 충전!
+       </span>
+      </a>
+     </div>
+     <div class="item">
+      <a class="link" href="https://itour.incheon.go.kr/thmtour/thmtour/detail.do?cotId=ITA24110413453911976" style="background-image: url(/main/viewImg.do?imgId=410)">
+       <span class="blind">
+        차 한 잔이면 겨울 준비 끝, 인천 전통찻집
+       </span>
+       <span class="text">
+        차 한 잔이면 겨울 준비 끝, 인천 전통찻집
+       </span>
+      </a>
+     </div>
+    </div>
+    <div class="play_buttons">
+     <button class="btn play" tabindex="-1" type="button">
+      <span class="blind">
+       재생
+      </span>
+     </button>
+     <button class="btn pause active" type="button">
+      <span class="blind">
+       정지
+      </span>
+     </button>
+    </div>
+   </section>
+   <form action="/intgrfind/list.do" id="frmSearch" method="post" name="frmSearch">
+    <!-- div style="display:none;">
+    	<input type="text" class="text" >
+     </div -->
+    <section class="search_form wrap" id="searchContent">
+     <h2 class="blind">
+      통합검색
+     </h2>
+     <fieldset>
+      <legend>
+       통합검색
+      </legend>
+      <div class="search_wrap">
+       <label class="blind" for="total_search">
+        검색어 입력
+       </label>
+       <input class="text" id="total_search" name="ipt_intgrfind_kword" placeholder="검색어를 입력해 주세요." type="search"/>
+       <input class="search_submit" id="btn_total_search" name="ipt_intgrfind_kword" type="button" value="검색"/>
+      </div>
+     </fieldset>
+    </section>
+   </form>
+   <div class="wrap">
+    <section class="main_tag" id="section_main_tag">
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=힐링하기좋은">
+      #힐링하기좋은
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=섬여행">
+      #섬여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=가족과함께">
+      #가족과함께
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인천대공원">
+      #인천대공원
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인천주말여행">
+      #인천주말여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=야경감상하기좋은">
+      #야경감상하기좋은
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=겨울여행">
+      #겨울여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=겨울">
+      #겨울
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인생샷은여기서">
+      #인생샷은여기서
+     </a>
+    </section>
+    <section class="main_tag all" id="section_main_tag_temp" style="display:none;">
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=힐링하기좋은">
+      #힐링하기좋은
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=섬여행">
+      #섬여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=가족과함께">
+      #가족과함께
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인천대공원">
+      #인천대공원
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인천주말여행">
+      #인천주말여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=야경감상하기좋은">
+      #야경감상하기좋은
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=겨울여행">
+      #겨울여행
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=겨울">
+      #겨울
+     </a>
+     <a class="link" href="/intgrfind/list.do?ipt_intgrfind_kword=인생샷은여기서">
+      #인생샷은여기서
+     </a>
+    </section>
+    <section class="status">
+     <h2 class="blind">
+      인천 투어 상황
+     </h2>
+     <div class="list">
+      <div class="item n1">
+       <div class="bg">
+        <div class="sun sunrise">
+         <span class="blind">
+          일출
+         </span>
+         <span class="time">
+         </span>
+        </div>
+        <div class="sun sunset">
+         <span class="blind">
+          일몰
+         </span>
+         <span class="time">
+         </span>
+        </div>
+       </div>
+       <div class="status_text">
+        <strong>
+         <span class="temperature">
+         </span>
+        </strong>
+       </div>
+       <a class="link" href="https://www.weather.go.kr/w/index.do" target="_blank">
+        <span class="blind">
+         기상청 바로가기
+        </span>
+       </a>
+      </div>
+      <div class="item n6">
+       <div class="bg">
+        <div class="title">
+         조석예보
+        </div>
+       </div>
+       <div class="status_text">
+        <div class="" id="tph1">
+         <span id="tph_time1">
+         </span>
+         <strong id="tph_level1">
+         </strong>
+        </div>
+        <div class="" id="tph2">
+         <span id="tph_time2">
+         </span>
+         <strong id="tph_level2">
+         </strong>
+        </div>
+       </div>
+       <a class="link" href="https://www.khoa.go.kr/swtc/main.do" target="_blank">
+        <span class="blind">
+         조석예보 바로가기
+        </span>
+       </a>
+      </div>
+      <div class="item n2">
+       <!-- 좋음 : level_1, 보통 : level_2, 나쁨 : level_3 -->
+       <div class="bg">
+        <div class="title">
+         선재도 바다갈라짐
+        </div>
+        <div class="text" id="n2_text">
+        </div>
+       </div>
+       <div class="status_text">
+        목섬에
+        <br/>
+        <strong id="n2_str">
+        </strong>
+        <span class="blind" id="n2_blind">
+        </span>
+       </div>
+      </div>
+      <div class="item n4">
+       <!-- 좋음 : level_1, 보통 : level_2, 나쁨 : level_3 -->
+       <div class="bg">
+        <div class="title">
+         영흥도 출조 상태
+        </div>
+        <div class="text" id="n4_text">
+        </div>
+       </div>
+       <div class="status_text">
+        출조상태
+        <br/>
+        <strong id="n4_text2">
+        </strong>
+        <span class="blind" id="n4_blind">
+        </span>
+       </div>
+      </div>
+      <div class="item n5">
+       <!-- 좋음 : level_1, 보통 : level_2, 나쁨 : level_3 -->
+       <div class="bg">
+        <!--  <div class="title">연안여객터미널</div> -->
+        <div class="title">
+         여객선예매
+        </div>
+       </div>
+       <div class="status_text">
+        백령도까지
+        <br/>
+        <strong id="n5_text">
+        </strong>
+        <span class="blind" id="n5_blind">
+        </span>
+       </div>
+       <a class="link" href="http://island.haewoon.co.kr" target="_blank">
+        <span class="blind">
+         여객선 예약예매 바로가기
+        </span>
+       </a>
+      </div>
+     </div>
+    </section>
+    <script type="text/javascript">
+     $(document).ready(function(){
+			/* 선재도 바다갈라짐 */
+	        $.ajax({
+				url: "/api/main/mainAPI06.do",
+				type: "POST",
+				contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				success: function(result){
+				
+					if(result.isCan==true){
+						$(".n2").addClass("level_1");
+						$("#n2_str").html("갈수 있어요");
+						$("#n2_blind").html("밝은표정아이콘");
+					}else{
+						$(".n2").addClass("level_3");
+						$("#n2_str").html("갈수 없어요");
+						$("#n2_blind").html("우울한표정아이콘");
+					}
+					
+					if(result.spStartTimeStr!="" && result.spEndTimeStr!=""){
+						$("#n2_text").html(result.spStartTimeStr +"&nbsp;~&nbsp;" +result.spEndTimeStr);
+					}
+					
+				},
+				error:function(msg){
+			    }
+			});
+	    	
+			
+			/* 출조상태 */
+	        $.ajax({
+				url: "/api/main/mainAPI05.do",
+				type: "POST",
+				contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				success: function(result){
+                    $(".n4").addClass(result.levelCss);
+					$("#n4_text").html(result.cjState);
+					$("#n4_text2").html(result.cjState);
+					
+					if(result.levelCss== "level_1"){
+						$("#n4_blind").html("밝은표정아이콘");
+					}else if(result.levelCss=="level_2"){
+						$("#n4_blind").html("무표정 아이콘");
+					}else{
+						$("#n4_blind").html("우울한표정 아이콘");
+					}
+					
+				},
+				error:function(msg){
+			    }
+			});
+	    	
+			
+			
+			/* 일출 일몰 */
+	        $.ajax({
+				url: "/api/main/mainAPI01.do",
+				type: "POST",
+			 	contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				    
+				success: function(result){
+					$(".sunrise .time").text(result.sunrise);
+					$(".sunset .time").text(result.sunset);
+					 
+				},
+				error:function(request, status, error){ 
+			    }
+			});
+			
+			 
+	    	/* 온도 날씨 */
+	        $.ajax({
+				url: "/api/main/mainAPI04.do",
+				type: "POST",
+				contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				success: function(result){
+                    $(".temperature").html(result.temp+ "℃ &nbsp;&nbsp; "+result.sky); // 온도
+				},
+				error:function(msg){
+			    }
+			});
+	    	
+	    	
+	        /* 조석예보 */
+	        $.ajax({
+				url: "/api/main/mainAPI02.do",
+				type: "POST",
+				contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				success: function(result){
+
+					var tph1="";
+					var tph2="";
+					var tph1_class="";
+					var tph2_class="";
+					if(result.hl_yn1=="HIGH"){
+						tph1="고";
+						tph1_class="high";
+						}
+					else {
+						tph1="저";
+						tph1_class="low";
+						}						
+					if(result.hl_yn2=="HIGH"){
+						tph2="고";
+						tph2_class="high";
+						}
+					else {
+						tph2="저";
+						tph2_class="low";
+						}
+	        
+					$("#tph_time1").html(result.tph_time1);
+					$("#tph_level1").html(result.tph_level1 + "cm <em>"+tph1+"</em>");					
+					$("#tph1").attr('class',tph1_class);
+					if(result.tph_level2 != null){
+						$("#tph_time2").html(result.tph_time2);
+						$("#tph_level2").html(result.tph_level2 + "cm <em>"+tph2+"</em>");
+						$("#tph2").attr('class',tph2_class);
+					}else{
+						$("#tph2").remove();
+					}
+										
+													
+				},
+				error:function(msg){
+			    }
+			});
+			
+	        
+	        /* 여객터미널정보 */
+	        $.ajax({
+				url: "/api/main/mainAPI03.do",
+				type: "POST",
+				contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+				dataType: 'json',
+				success: function(result){
+					if(result.uhState == '정상운항'){
+						
+						$(".n5").addClass('level_1');
+						$("#n5_blind").text("밝은표정 아이콘");
+						
+					}else{
+						
+						$(".n5").addClass('level_3');
+						$("#n5_blind").text("우울한표정 아이콘");
+					}
+					$("#n5_text").html(result.uhState);
+					
+				},
+				error:function(msg){
+				//	$("#api03").attr('class','sts_txt3');
+				//	$("#api03").text("");
+					
+			    }
+			});
+	        
+		});
+    </script>
+    <section class="popular_tour">
+     <h2 class="section_title">
+      <span>
+       요즘인기!
+      </span>
+      <strong>
+       인천투어
+      </strong>
+     </h2>
+     <ul class="list">
+      <li class="item">
+       <div class="photo">
+        <img alt="여기, 인천의 작지만 위대한 책방들" src="/main/viewImg.do?imgId=418"/>
+       </div>
+       <div class="subject">
+        <a class="link" href="https://itour.incheon.go.kr/thmtour/rcmdtour/detail.do?cotId=ITA21122411405756262">
+         여기, 인천의 작지만 위대한 책방들
+        </a>
+       </div>
+       <div class="tag">
+        #인천책방 
+						
+                    
+                    	
+		     			#독립서점 
+						
+                    
+                    	
+		     			#인천여행 
+						
+                    
+                    	
+		     			#텍스트힙 
+						
+                    
+                    	
+		     			#인천책방
+       </div>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="등대 보러 가지 않을래, 낭만 등대 데이트" src="/main/viewImg.do?imgId=417"/>
+       </div>
+       <div class="subject">
+        <a class="link" href="https://itour.incheon.go.kr/thmtour/thmtour/detail.do?cotId=ITA21122411461405180">
+         등대 보러 가지 않을래, 낭만 등대 데이트
+        </a>
+       </div>
+       <div class="tag">
+        #등대데이트 
+						
+                    
+                    	
+		     			#연인과함께 
+						
+                    
+                    	
+		     			#인생샷은여기서 
+						
+                    
+                    	
+		     			#인천가볼만한곳 
+						
+                    
+                    	
+		     			#인천데이트명소
+       </div>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="인천에서 꼭 해야 할 색다른 9가지 경험, 인천 9경" src="/main/viewImg.do?imgId=415"/>
+       </div>
+       <div class="subject">
+        <a class="link" href="https://itour.incheon.go.kr/thmtour/cardnews/detail.do?cotId=CAR24102216284323297">
+         인천에서 꼭 해야 할 색다른 9가지 경험, 인천 9경
+        </a>
+       </div>
+       <div class="tag">
+        #인천9경 
+						
+                    
+                    	
+		     			#인천가볼만한곳 
+						
+                    
+                    	
+		     			#인천여행 
+						
+                    
+                    	
+		     			#인천명소 
+						
+                    
+                    	
+		     			#인천여행지추천
+       </div>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="섬으로 훌쩍 떠나고 싶은 날엔, 승봉도!" src="/main/viewImg.do?imgId=416"/>
+       </div>
+       <div class="subject">
+        <a class="link" href="https://itour.incheon.go.kr/thmtour/thmtour/detail.do?cotId=ITA23062114570405550">
+         섬으로 훌쩍 떠나고 싶은 날엔, 승봉도!
+        </a>
+       </div>
+       <div class="tag">
+        #승봉도 
+						
+                    
+                    	
+		     			# 인천섬 
+						
+                    
+                    	
+		     			#인천섬여행 
+						
+                    
+                    	
+		     			#섬여행 
+						
+                    
+                    	
+		     			#인천가볼만한곳 
+						
+                    
+                    	
+		     			#승봉도여행
+       </div>
+      </li>
+     </ul>
+    </section>
+   </div>
+   <div class="notice_wrap">
+    <section class="notice">
+     <h2 class="notice_title">
+      공지사항
+     </h2>
+     <ul class="list">
+      <li class="item">
+       <a class="link" href="/tourinfo/ntbd/detail.do?bbsNo=56300">
+        [이벤트] 방구석 보물섬 여행 함께 떠나실래요?
+       </a>
+       <span class="date">
+        2024-11-26
+       </span>
+      </li>
+      <li class="item">
+       <a class="link" href="/tourinfo/ntbd/detail.do?bbsNo=56299">
+        2024 크리스마스트리 문화축제
+       </a>
+       <span class="date">
+        2024-11-21
+       </span>
+      </li>
+      <li class="item">
+       <a class="link" href="/tourinfo/ntbd/detail.do?bbsNo=56298">
+        2024 인천투어 이용만족도 설문조사
+       </a>
+       <span class="date">
+        2024-11-14
+       </span>
+      </li>
+      <li class="item">
+       <a class="link" href="/tourinfo/ntbd/detail.do?bbsNo=56295">
+        인천 평화안보 관광체험단 모집
+       </a>
+       <span class="date">
+        2024-11-13
+       </span>
+      </li>
+     </ul>
+     <a class="more" href="/tourinfo/ntbd/list.do">
+      <span class="blind">
+       공지사항
+      </span>
+      더보기
+     </a>
+    </section>
+    <section class="popupzone">
+     <h2 class="blind">
+      팝업존
+     </h2>
+     <div class="list">
+      <div class="item">
+       <div class="photo">
+        <a href="https://itour.incheon.go.kr/tourinfo/evnt/detail.do?bbsNo=56297">
+         <img alt="인천투어 이용만족도 설문조사 이벤트" src="/main/viewImg.do?imgId=420"/>
+        </a>
+       </div>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <a href="https://itour.incheon.go.kr/tourinfo/ntbd/detail.do?bbsNo=56286">
+         <img alt="인천 9경" src="/main/viewImg.do?imgId=396"/>
+        </a>
+       </div>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <a href="https://www.iisland.or.kr/community/newsletter.asp" target="_blank" title="새창열림">
+         <img alt="인천섬발전지원센터 소식지 인천 섬 이야기" src="/main/viewImg.do?imgId=331"/>
+        </a>
+       </div>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <a href="https://itour.incheon.go.kr/thmtour/cardnews/list.do">
+         <img alt="인천 관광정보를 더 편리하게 보는 방법, 카드뉴스 보러가기" src="/main/viewImg.do?imgId=330"/>
+        </a>
+       </div>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <a href="http://www.icdeaf.com/bbs/board.php?bo_table=video_reference&amp;sca=%EC%9D%B8%EC%B2%9C+%EC%A3%BC%EC%9A%94%EA%B4%80%EA%B4%91%EC%A7%80" target="_blank" title="새창열림">
+         <img alt="무장애관광지의 첫걸음 인천광역시 수어관광지도 " src="/main/viewImg.do?imgId=316"/>
+        </a>
+       </div>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <a href="/tourinfo/trsmic/html.do">
+         <img alt="인천시 관광안내소 이미지 - 인천을 쉽고 편리하게 여행 하는 방법, 인천시 관광안내소를 이용하세요!" src="/main/viewImg.do?imgId=106"/>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="progress" tabindex="-1">
+      <div class="bar" style="width:0;">
+      </div>
+      <span class="blind">
+       총
+       <span class="total">
+       </span>
+       건중
+       <span class="now">
+       </span>
+       번째
+      </span>
+     </div>
+    </section>
+   </div>
+   <div class="main_sns">
+    <h2 class="section_title">
+     <span>
+      SNS
+     </span>
+     <strong>
+      인천 핫스팟
+     </strong>
+    </h2>
+    <div class="buttons">
+     <a class="btn blog" href="https://blog.naver.com/discoverincheon" target="_blank" title="새창열림">
+      <span class="blind">
+       블로그
+      </span>
+     </a>
+     <a class="btn instagram" href="https://www.instagram.com/discoverincheon/" target="_blank" title="새창열림">
+      <span class="blind">
+       인스타그램
+      </span>
+     </a>
+     <a class="btn facebook" href="https://www.facebook.com/discoverincheon/" target="_blank" title="새창열림">
+      <span class="blind">
+       페이스북
+      </span>
+     </a>
+     <a class="btn youtube" href="https://www.youtube.com/discoverincheon" target="_blank" title="새창열림">
+      <span class="blind">
+       유투브
+      </span>
+     </a>
+    </div>
+    <div class="sns_wrap">
+     <div class="play_buttons">
+      <button class="btn play" type="button">
+       <span class="blind">
+        재생
+       </span>
+      </button>
+      <button class="btn pause active" type="button">
+       <span class="blind">
+        정지
+       </span>
+      </button>
+     </div>
+     <ul class="sns_list clearfix" id="instagram">
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.75761-15/468648899_18385629454096460_2631363594342121246_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=rfa3yiOG79EQ7kNvgG9nOL9&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYApslJlsLmu6FwZ0z6tqCaJqx49I3fsKhZ6OHBd2qEfFg&amp;oe=6752EBD6"/>
+        <!-- alt="뚜벅이 완.벽. 그 자체인 인천여행 코스🌟
+1호선 인천역에서 내려서 당일치기로 가능한 여행 코스를 소개합니다!🚉 
+주변에 맛집과 예쁜 카페까지 많아서 완벽하지 않을 수가 없는....♥️ 이대로만 다녀오시면 200% 성공🤤
+
+⬇️ 인천역 도착
+
+📚 상상플랫폼
+📍인천 중구 월미로 33
+▪️요즘 인천의 떠오르는 핫플인 상상플랫폼! 곡물창고였던 폐공장을 리모델링하여 만든 복합 문화공간인데, 전시도 볼 수 있고, 다양한 행사도 하고! 바다 보이는 카페도 있어서 힐링하러 가기 딱 좋아요! 특히 최근부터 미디어아트도 시작해서, 지금 다녀오는 게 기회..!✨
+•미디어아트 : 11월 15일(금)~12월 5일(목), 18시~22시
+•상플시네마 : 11월 22일(금)~12월 21일(토) / 네이버예약
+
+⬇️ 도보 약 7분
+
+🍜 차이나타운
+📍인천 중구 차이나타운로26번길 12-17
+▪️인천에 간다면 무조건 가야하는 차이나타운! 짜장면&짬뽕 필수로 드시고 오셔야 합니다🍜 저는 ’신승반점‘에서 먹었는데 유니짜장이 특히나 맛있었어요!
+
+⬇️ 도보 약 5분
+
+🚂 송월동 동화마을
+📍인천 중구 송월동3가 17-1
+▪️아기자기.. 너무 귀여운 마을🎅🏻 구경거리도 많고 포토존도 많아서 꼭 들려야 할 곳이에요! 특히 추억의 떡꼬치 먹고 싶다면 동화마을슈퍼도 들러보세요🍡
+
+⬇️ 버스 약 20분
+
+🌅 월미도
+📍인천 중구 북성동1가 98-352
+▪️레트로 놀이공원과 다양한 맛집, 바다 보이는 카페가 많은 월미도! 노을은 꼭 월미도에서 보셔야 해요! ✨ 
+
+저장+공유하고 뚜벅이 여행 함께 떠날 친구 태그 해보세요♥️
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!�ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+#인천가볼만한곳 #인천여행 #여행은인천이지
+#상상플랫폼 #인천차이나타운 #송월동동화마을 #월미도"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/reel/DC6Dre-Pviq/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/reel/DC6Dre-Pviq/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t39.30808-6/468391880_992138686281817_4442424800807799449_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=YdWEhDmqNfsQ7kNvgG_ddwK&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYDFCV9zhpReg1dMvy6_xmePNm32zWL6k_Y-IiQ0LFqyzw&amp;oe=6752F9CA"/>
+        <!-- alt="(저장필수) #크리스마스 분위기 인천 카페 추천🎄
+@@아! 다가오는 겨울에는 여기 가볼래?!
+
+조만간 펼쳐질 예정이라는
+크리스마스 시즌에 꼭 가봐야 한다는
+화려한 볼거리가 가득한 인천 카페 3곳을 소개합니다❤️
+
+📷1-3 #바다앞테라스
+🔎 주소 : 인천 중구 은하수로 10 더 테라스프라자 5층
+겨울마다 딸기로 꾸며진 대형 트리 포토존이 있는 곳으로
+연인과 함께 방문하여 예쁜 사진을 남겨보세요✨
+※ 작년 사진이 포함되어 있습니다.
+
+📷4-5 #포레스트아웃팅스 송도점
+🔎 주소 : 인천 연수구 청량로 145
+개방감이 느껴지는 식물원 느낌의 대형 카페로
+알록달록 크리스마스 소품들과 트리가 꾸며져 있어요!
+
+📷6-7 #카페소풍
+🔎 주소 : 인천 중구 용유로 192
+아늑하고 편안한 감성에
+크리스마스 분위기를 얹은 곳으로
+난로 위에서 구운 군고구마도 맛볼 수 있다고 하니,
+올해 꼭 다녀와보시길 추천드립니다🤎
+
+📷1 네이버 블로그 dalkom_one 님
+📷2,3 인스타그램 @terrace.in.seaside 님
+📷4 인스타그램 @dbcjs1028 님
+📷5 네이버 블로그 wlgmlk0412 님
+📷6,7 네이버 블로그 dbcjs1028 님
+※ 카페 상황에 따라 내용 등은 변동 가능성이 있습니다.
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/p/DC0T9ddI3Oh/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/p/DC0T9ddI3Oh/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.75761-15/468287273_18385213591096460_8394099138444811723_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=WIYiuHTpO7gQ7kNvgFCHid5&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYALMRJUEmRrX-V_dhPpty5sOySpVh6NDXjNpah66hq-5g&amp;oe=6752E42E"/>
+        <!-- alt="스피드 조절 하나로 트렌디하고 멋진 영상을 만드는 법!🎥
+⠀
+1️⃣패스트 모션
+속도를 올리는 것으로 빠르게 넘어갈 때 사용해요. 같은 방향으로 움직임을 줘 촬영하고 앞뒤 속도를 올려 부드럽게 연결하면 스타일리시한 트랜지션 완성!
+⠀
+2️⃣슬로우 모션
+빠른 움직임을 더욱 극적으로 표현할 때 사용해요.
+영상이 끊기지 않고 자연스럽게 느려지게 하려면 60프레임 이상으로 촬영하는 게 필수!
+촬영한 프레임수를 최종 영상 프레임수로 나누고 100을 곱하면 최대 슬로우 비율을 알 수 있어요.
+⠀
+⠀
+인천에 이렇게 큰 복합문화공간이 있다는 것 아시나요?!😮
+✔️ 과거 아시아 최대 곡물창고를 재탄생 시킨 곳이라 크기가 엄청 커요.
+✔️ 야외에는 바다와 노을을 감상할 수 있는 1883 개항광장, 1층에는 다양한 문화, 예술, 전시가 이뤄지는 웨이브홀과 뮤지엄엘 , 3~4층엔 바다 뷰를 감상 가능한 베이커리 카페 스토리지 인천이 있어요.
+✔️ 인천역, 차이나타운, 개항장거리, 월미도 인근에 위치해 관광지와 함께 둘러볼 수 있어요.
+⠀
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+⠀
+#인천가볼만한곳 #인천여행 #여행은인천이지
+#인천관광공사 #상상플랫폼 #filmmaker #tutorial #verticalvideo #shortfilm"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/reel/DCymJNLvUD_/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/reel/DCymJNLvUD_/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.75761-15/467855701_18384482317096460_747339788490973617_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=dgwZMgA4-2wQ7kNvgF8v30X&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYDo5LxHJj_SoE2Z9iDWC--qdlFxuHXRcvWvlvmaVEKdig&amp;oe=6752ED93"/>
+        <!-- alt="한 건물에서 하루종일 데이트하기 좋은 인천 상상플랫폼✨
+
+전시,카페,공연장 등 다 모여있는 인천 상상플랫폼
+
+새로 오픈한 1883 개항의 빛 미디어아트전시로 
+낮부터 밤까지 한 공간에서 즐길 수 있답니다 ❤
+
+낮에는 건물 안에서 오션뷰 카페와 전시를 즐기고,
+밤에는 외부에서 멋진 미디어아트를 감상해보세요 🙌 
+
+추워진 날씨에 많이 이동하지 않고,
+한 공간에서 데이트하고 싶어지는 요즘❄ 인천 상상플랫폼에서 특별한 시간을 보내보는 건 어떨까요?
+ ----------------------------------------- 
+
+상상플랫폼 미디어아트 전시
+ 📆일자: 2024.11.15(금) ~ 12.5(목)
+⌚시간 : 매일 18:00 ~ 22:00
+✅ 장소 : 상상플랫폼 야외(1883개항광장)
+📍 위치 : 인천 중구 월미로 33 상상플랫폼
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요! 
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+#인천가볼만한곳 #인천여행 #여행은인천이지
+#상상플랫폼 #뮤지엄엘 #스토리지인천 #미디어아트"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/reel/DCl_qvIP_cj/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/reel/DCl_qvIP_cj/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t39.30808-6/467450069_987195896776096_1699588063575441719_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=eqZ9kCP3d6AQ7kNvgEl01b1&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYCQWZPjmVVf4YCy1BNp2KaWE8YH6MOZBZpcxunzmzg9ww&amp;oe=67530B2C"/>
+        <!-- alt="(저장필수) 혹시… 먹으러 인천 가세요?!
+MZ세대에게 핫한 #길거리음식 과 #간식 을 전부 모은
+인천e지가 추천하는 개항장 대표 간식패스 소개합니다✨
+
+📷2 #타르트킹
+🔎 주소 : 인천 중구 차이나타운로 17
+바삭하게 부서지는 페스츄리와
+따뜻한 커스타드 크림의 식감이 정말 맛있는 곳!
+
+📷3 #중국제과담
+🔎 주소 : 인천 중구 차이나타운로 39-1
+대만식 수제과자 누가크래커, 펑리수는 물론
+중국식 월병, 공갈빵 등을 만나볼 수 있는 곳💡
+
+📷4 #홍두병
+🔎 주소 : 인천 중구 차이나타운로 48
+얇은 반죽 안에 달콤한 팥소를 넣어 구운 팥빵 간식 맛집!
+
+📷5 #십리향
+🔎 주소 : 인천 중구 차이나타운로 50-2
+담백하고 쫄깃한 식감의 화덕만두 맛집으로
+고기, 고구마, 단호박, 팥맛은 물론 마라맛까지 있대요🌟
+
+📷1,6 #팟알
+🔎 주소 : 인천 중구 신포로27번길 96-2
+개항장 주변에서 간식을 먹다가 쉬고 싶다면?!
+대한민국 근대문화유산으로 지정된 건물에 있는
+디저트 맛집 팟알 카페에 들러보세요🤎
+
+📷7 #신포국제시장
+🔎 주소 : 인천 중구 신포동 6-6
+전통시장 K-관광마켓 10선으로 선정된 곳으로
+닭강정, 호떡, 만두, 팥빵, 떡볶이 등
+K-간식을 잔뜩 만나볼 수 있답니다😉
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/p/DCkxCttKcx2/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/p/DCkxCttKcx2/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t39.30808-6/467590617_986576803504672_3893103859523791693_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=38Z_O7xia7AQ7kNvgEMfI_k&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYBd1DF3LN9a71F6TOKk03uorgdN60OlkDkvV-TeiDQirQ&amp;oe=67530714"/>
+        <!-- alt="✨주말에 구경 다녀올만한 나들이 코스 추천✨
+동인천 #배다리역사문화마을 헌책방+갤러리+박물관=🤎💡
+
+가을 날씨를 만끽하며 구경하기 좋은
+배다리 역사 문화마을 알고 계시나요?!
+편안한 분위기를 즐겨보며 이곳저곳 둘러보세요-!!
+
+📷1-2 #동성한의원
+🔎 주소 : 인천 동구 서해대로513번길 9 구 동성한의원
+한의원이라는 이름과 다르게 실제로는 #문화상점 으로
+서적과 아기자기한 소품을 만나볼 수 있는 곳!
+
+📷3-4 #배다리아트스테이1930
+🔎 주소 : 인천 동구 금곡로11번길 1-4 진도여인숙
+아트 커뮤니티 센터로 운영되고 있는 장소로
+‘작은미술관’에서는 미술 전시를 감상할 수 있습니다😉
+
+📷5-6 #배다리성냥마을박물관
+🔎 주소 : 인천 동구 금곡로 19
+그거 아세요?! 한국의 첫 성냥공장이 인천에 있었다는 사실!
+과거 우체국이었던 건물을 #성냥박물관 으로 만든 곳🌟
+성냥의 모습과 이야기를 직접 구경해 보세요✨
+
+📷1 인천관광 온라인 홍보단 5기 @agata0710 님
+📷2,3 인천관광 온라인 홍보단 5기 @junni_trip 님
+📷4,5 네이버 블로그 nallala 님
+📷6,7 네이버 블로그 sting099 님
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/p/DCihmvzPyhV/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/p/DCihmvzPyhV/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.75761-15/467528475_18384123055096460_7839539385265411303_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=vqHpJRGSjswQ7kNvgFp3MHJ&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYDIlq8DbDoMrdBlU4aSRr8RUR7IbguSnH8T_Re-Y3AqHw&amp;oe=67530831"/>
+        <!-- alt="26개월 딸이 결정하는 인천으로 당일치기 여행 🚗
+
+오늘은 아이와 함께 인천 당일치기 여행을 다녀왔는데요!
+
+요즘 떠오르는 인천의 핫플레이스 상상플랫폼을 포함하여,
+아이와 함께하기에 딱 좋은 당일 코스로 다녀왔습니다✨
+
+아이도 정말 좋아하고 저도 만족했던 여행
+자세한 내용은 영상으로 확인해주세요! (감동 주의😭)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+🚗 아이와 당일치기 인천 여행 추천 코스
+✅ 상상플랫폼 (뮤지엄엘 전시, 스토리지 인천 카페) – 송월동 동화마을 – 개항 누리길 – 차이나타운 (백짜장) – 월미도 테마파크 
+
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+#인천가볼만한곳 #인천여행 #여행은인천이지
+#상상플랫폼 #뮤지엄엘 #스토리지인천"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/reel/DCgRQzJPvAo/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/reel/DCgRQzJPvAo/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.75761-15/466742826_18383661562096460_856713834941376983_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=Hc-lW8tod-UQ7kNvgEREiuB&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYDgvSXFmwdFbgF7m_SFVeU3f4tPCjaVrg7O2qp5oaVWjg&amp;oe=67530EFB"/>
+        <!-- alt="팝업스토어 60개가 한곳에!?🩵 인천 최대 규모 행사 제물포 웨이브 마켓✨
+⠀
+인천에 위치한 상상플랫폼에 다녀왔어요!
+상상플랫폼은 새로운 복합문화공간으로
+다양한 행사와 뮤지엄, 카페 등이 있는데요!
+⠀
+올해 3회차 제물포 웨이브 마켓이 열렸답니다!
+푸드부터 굿즈, 체험, 패션 등
+60개의 로컬 브랜드가 있어
+볼거리와 먹거리가 한가득이더라구요!
+⠀
+심지어 이번에는 야외 공간까지 운영을 했는데,
+푸른 잔디 광장에 앉아서 버스킹도 즐기고
+다양한 로컬 상품도 구경했어요💚
+마지막은 다양한 이벤트 참여할 수 있었어요!
+⠀
+인천역에서 가깝고 인천의 떠오르는 핫플이니
+상상플랫폼 다들 꼭 한번 들려보세요!
+다음 행사도 많관부✨
+⠀
+📷상상플랫폼
+📍인천 중구 월미로 33 상상플랫폼
+⠀
+--------------------------------------
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+⠀
+#인천가볼만한곳 #인천여행 #인천데이트코스
+#인천상상플랫폼 #상상플랫폼 #인천플리마켓"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/reel/DCYaOcop74z/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/reel/DCYaOcop74z/"/>
+      </li>
+      <li class="item">
+       <div class="photo">
+        <img alt="한국관광공사 인스타그램 이미지 (새창열림)" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.29350-15/466747115_574954805032799_5754816675340212414_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=g4R39ew2rsAQ7kNvgHc5Vyb&amp;_nc_zt=23&amp;_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=Air-KznGHvIe_eQVOY6a62r&amp;oh=00_AYBL3XNRdQBSRZ0-5rH5M2EFDPkyXfumYAab-Spx2XFQPA&amp;oe=6752EAE0"/>
+        <!-- alt="✨1883 개항의 빛, 상상플랫폼에서 다시 태어나다✨
+상상플랫폼 미디어아트 전시🌟
+⠀
+야경 속 살아 움직이는 드로잉이
+인천 상상플랫폼을 찾아옵니다‼️
+⠀
+1883년 개항으로 시작된 빛이 140년의 시간을 초월해
+상상플랫폼 미디어아트로 다시 태어났습니다.
+이번 미디어아트는 김재열 대표님의 작품을 바탕으로
+인천의 과거, 현재를 연결해 줍니다.
+⠀
+생동감 넘치는 모습으로 연출한 미디어 파사드와
+인천의 빛을 상징한 400여개의 빛나는 기둥은
+역사 속 인천의 여정을 함께할 상징이 됩니다🌃
+⠀
+2024년 특별한 연말을 보내고 싶다면
+역사적인 순간 사이를 거닐 수 있는
+상상플랫폼 미디어아트 전시와 함께하세요❣️
+⠀
+📆일자: 2024.11.15(금) ~ 12.5(목)
+⌚시간 : 매일 18:00 ~ 22:00
+📍위치: 상상플랫폼 야외 (1883개항광장)
+⠀
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+📌 #여행은인천이지 #인천e지
+📌 여러분의 인천여행에 @discoverincheon을 태그해 주세요!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"  -->
+       </div>
+       <div class="icon instagram">
+        인스타그램
+       </div>
+       <a class="link" href="https://www.instagram.com/p/DCWDS09pPMJ/" target="_blank" title="새창열림">
+        상세보기
+       </a>
+       <input name="sns_url" type="hidden" value="https://www.instagram.com/p/DCWDS09pPMJ/"/>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="main_movie">
+    <div class="movie">
+     <div class="list">
+      <div class="item">
+       <div class="photo">
+        <img alt="대청도가 서해의 홍어 최대 생산지?! 외국인 유튜버 Bart와 함께하는 대청도 어촌 체험 [인천 탐구생활 2편 대청도 어촌 체험]" src="/main/viewImg.do?imgId=414"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=Raar9DkOKQo&amp;t=169s" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="인천 교동도 떡집 알바생이 된 22만 외국인 유튜버?!  [인천 탐구생활 1편 교동도 일" src="/main/viewImg.do?imgId=413"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=vHNAyRSAEkM&amp;t=8s" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="먹자! 놀자! 마시자! 즐거움이 가득했던 인천 1883 상상플랫폼 야시장 스케치" src="/main/viewImg.do?imgId=412"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=PFMhfFiDUTs" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="인천e지와 함께하는 인천여행🙌🏼 " src="/main/viewImg.do?imgId=321"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=UK75EZNz7fY&amp;t=12s" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="[올랄라여행사] 힐링 or MZ 당신의 여행 취향은?(with 유민상)2" src="/main/viewImg.do?imgId=340"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=T7P3nvLD2hI" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="인천에서 출발하는 우주여행☄️ #미디어아트" src="/main/viewImg.do?imgId=404"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/shorts/xxVGUqt-7rA" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="Back to 2000! ュ ㄸĦ 감성 ュㄷН로~★ 당일치기 인천 부평 레트로 여행📸 ㅣ Incheon Korea Travel" src="/main/viewImg.do?imgId=354"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=fAVbccrfndQ" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="그냥 혼자 푹 쉬고 싶을 때. 혼자 여행" src="/main/viewImg.do?imgId=405"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/shorts/oYlS0nS3EcQ" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="호텔 전문가가 추천하는 인천 스테이 BEST 3" src="/main/viewImg.do?imgId=382"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/watch?v=Vdigq2VW62w" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+      <div class="item">
+       <div class="photo">
+        <img alt="10월 연휴✨ 가을 데이트하기 딱인 인천 월미도 코스 추천 😊" src="/main/viewImg.do?imgId=406"/>
+       </div>
+       <a class="link" href="https://www.youtube.com/shorts/NIeivIX33-s" target="_blank" title="새창열림">
+        상세보기
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <form action="/tourrsve/metrip/list.do" id="frmTour" method="post" name="frmTour">
+    <div class="wrap customized_wrap">
+     <section class="customized">
+      <h2 class="section_title">
+       <span>
+        나만의
+       </span>
+       <strong>
+        인천 여행
+       </strong>
+      </h2>
+      <div class="guide">
+       각 항목을 선택하면, 맞춤 여행지를 추천해 드립니다.
+      </div>
+      <div class="section">
+       <div class="checkbox_title">
+        나이
+       </div>
+       <div class="checkbox_wrap">
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_10" name="age_10" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_10">
+          20대 미만
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_20" name="age_20" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_20">
+          20대
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_30" name="age_30" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_30">
+          30대
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_40" name="age_40" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_40">
+          40대
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_50" name="age_50" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_50">
+          50대
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="age_60" name="age_60" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="age_60">
+          60대 이상
+         </label>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="checkbox_title">
+        함께 가는 사람
+       </div>
+       <div class="checkbox_wrap">
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_alone" name="pers_alone" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_alone">
+          나혼자
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_frend" name="pers_frend" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_frend">
+          친구
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_lover" name="pers_lover" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_lover">
+          연인
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_family" name="pers_family" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_family">
+          가족
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_ople" name="pers_ople" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_ople">
+          어르신
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="pers_child" name="pers_child" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="pers_child">
+          아이
+         </label>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="checkbox_title">
+        여행 기간
+       </div>
+       <div class="checkbox_wrap">
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="perd_thday" name="perd_thday" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="perd_thday">
+          당일치기
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="perd_nights_1" name="perd_nights_1" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="perd_nights_1">
+          1박2일
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="perd_nights_2" name="perd_nights_2" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="perd_nights_2">
+          2박3일
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="perd_nights_3" name="perd_nights_3" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="perd_nights_3">
+          3박4일
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="perd_onemm" name="perd_onemm" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="perd_onemm">
+          한달살아보기
+         </label>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="checkbox_title">
+        여행 목적
+       </div>
+       <div class="checkbox_wrap">
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_nature" name="purps_nature" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_nature">
+          자연/경치
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_rest" name="purps_rest" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_rest">
+          휴식/힐링
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_food" name="purps_food" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_food">
+          미식
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_leport" name="purps_leport" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_leport">
+          레포츠/체험
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_driv" name="purps_driv" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_driv">
+          드라이브
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_shpp" name="purps_shpp" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_shpp">
+          쇼핑
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="purps_photo" name="purps_photo" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="purps_photo">
+          사진/영상
+         </label>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="checkbox_title">
+        여행 지역
+       </div>
+       <div class="checkbox_wrap">
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_1" name="area_1" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_1">
+          개항장 · 월미도
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_2" name="area_2" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_2">
+          송도 · 영종도
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_3" name="area_3" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_3">
+          강화도(교동도, 석모도)
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_4" name="area_4" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_4">
+          경인아라뱃길 · 청라
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_5" name="area_5" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_5">
+          원도심
+         </label>
+        </div>
+        <div class="c-checkbox">
+         <input class="c-checkbox_input" id="area_6" name="area_6" type="checkbox" value="Y"/>
+         <label class="c-checkbox_label" for="area_6">
+          인천의 섬
+         </label>
+        </div>
+       </div>
+      </div>
+      <div class="buttons">
+       <button class="btn submit" id="btn_metrip_search" name="btn_metrip_search" type="button">
+        여행지 찾기
+       </button>
+      </div>
+     </section>
+    </div>
+   </form>
+   <div class="side_banner">
+    <div class="item qna">
+     <button class="btn_chat" type="button">
+      <img alt="1330 여행상담" src="/images/side_banner.png"/>
+     </button>
+    </div>
+    <button class="close" type="button">
+     사이드베너 닫기
+    </button>
+   </div>
+   <div class="chat">
+    <div class="title">
+     실시간 문자채팅 안내
+    </div>
+    <div class="text">
+     이 문자채팅 관광안내는 한국관광공사에서 제공하는
+     <br/>
+     서비스 임
+    </div>
+    <div class="group n1">
+     <a class="link" href="javascript:;" onclick="openTtalk2();" tabindex="-1" title="새창열림">
+      바로 채팅장 열기
+      <br/>
+      <span class="gray">
+       (자체 채팅 앱)
+      </span>
+     </a>
+    </div>
+    <div class="group n2">
+     <a class="link kakao" href="javascript:;" onclick="openKakao();" tabindex="-1" title="새창열림">
+      <span class="blind">
+       카카오톡
+      </span>
+     </a>
+     <a class="link line" href="javascript:;" onclick="openLine();" tabindex="-1" title="새창열림">
+      <span class="blind">
+       라인
+      </span>
+     </a>
+     <a class="link facebook" href="javascript:;" onclick="openFacebook();" tabindex="-1" title="새창열림">
+      <span class="blind">
+       페이스북
+      </span>
+     </a>
+     <div>
+      사용중인 메신저앱 열기
+      <br/>
+      <span class="gray">
+       (해당앱이 설치되어 있어야 함)
+      </span>
+     </div>
+    </div>
+    <button class="close" tabindex="-1" type="button">
+     실시간 문자채팅 닫기
+    </button>
+   </div>
+   <script>
+    function openTtalk2(){
+    	window.open('https://1330chat.visitkorea.or.kr:3000/#/ttalk_main/CHAT1330_160635739001093018/_0300_0100_PAGENAME', "ttalkFrame", "width=500, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes, fullscreen=yes " );
+    }
+   </script>
+   <script>
+    (
+        function() {
+            function ttalk_load() {
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://1330chat.visitkorea.or.kr/ttalk/js/ttalkDev.js";
+                s.charset = "UTF-8";
+                var x = document.getElementsByTagName("script")[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === "complete") {
+                ttalk_load();
+            } else if (window.attachEvent) {
+                window.attachEvent("onload", ttalk_load);
+            } else {
+                window.addEventListener("DOMContentLoaded", ttalk_load, false);
+            }
+        }
+    )();
+    var ttalk_option = { "uuid" : "CHAT1330_160635739001093018", "button" : "ttalk_quick", "extra" : "_0400_0100_PAGENAME" };
+   </script>
+  </main>
+  <footer class="footer">
+   <!-- footer -->
+   <script type="text/javascript">
+    $(document).ready(function(){
+		$(".footer_site_last1").focusout(function(){		
+			  $(".footer_site .list").removeClass('active');
+			  $(".footer_site .list a").removeAttr("tabindex");
+		      $(".footer_site .list a").attr("tabindex","-1");
+		});
+	});
+   </script>
+   <div class="wrap">
+    <button class="goto_top" type="button">
+     <span class="blind">
+      상단으로 이동
+     </span>
+    </button>
+    <div class="footer_nav">
+     <div class="left">
+      <span class="item">
+       <span>
+        관광통역안내전화
+       </span>
+       <span class="tel">
+        1330
+       </span>
+      </span>
+      <span class="item">
+       <span>
+        인천종합관광안내소
+       </span>
+       <span class="tel">
+        032-832-3031
+       </span>
+      </span>
+     </div>
+     <div class="right">
+      <a class="footer_nav_link" href="/utlzinform/openapi.do">
+       관광사업체 OPEN API
+      </a>
+      <!-- /utlzinform/indvdlinfodlngplcy.do -->
+      <a class="footer_nav_link privacy" href="https://www.incheon.go.kr/IC050401" target="_blank">
+       개인정보처리방침
+      </a>
+      <a class="footer_nav_link" href="/utlzinform/cpyrhtsfgdpcy.do">
+       저작권보호정책
+      </a>
+      <a class="footer_nav_link" href="/utlzinform/sitemap.do">
+       사이트맵
+      </a>
+     </div>
+    </div>
+    <div class="footer_info">
+     <div class="left">
+      <div class="footer_logo">
+       <div class="logo tour">
+        <span class="blind">
+         인천투어
+        </span>
+       </div>
+       <div class="logo incheon">
+        <span class="blind">
+         인천광역시
+        </span>
+       </div>
+       <div class="logo ito">
+        <span class="blind">
+         인천관광공사
+        </span>
+       </div>
+      </div>
+      [21554]인천광역시 남동구 정각로 29(구월동)
+      <span class="tel">
+       TEL : 032-120
+      </span>
+      <span class="tel">
+       FAX :032-440-3009
+      </span>
+      <br/>
+      본 홈페이지에 게시되는 이메일주소 자동수집을 거부하며 이를 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+      <div class="copyright">
+       COPYRIGHT(c) 2018 Incheon Metropolitan City. ALL RIGHTS RESERVED.
+      </div>
+      <!-- <a href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank"><img src="/images/footer_webmark.png"/></a> -->
+     </div>
+     <div class="right">
+      <div class="footer_site">
+       <button class="btn" type="button">
+        유관 사이트
+       </button>
+       <ul class="list">
+        <li>
+         <a href="https://www.mcst.go.kr/kor/main.jsp" tabindex="-1" target="_blank">
+          문화체육관광부
+         </a>
+        </li>
+        <li>
+         <a href="https://www.incheon.go.kr/" tabindex="-1" target="_blank">
+          인천광역시
+         </a>
+        </li>
+        <li>
+         <a href="https://www.ito.or.kr/" tabindex="-1" target="_blank">
+          인천관광공사
+         </a>
+        </li>
+        <li>
+         <a href="https://incheon.tourbiz.or.kr/" tabindex="-1" target="_blank">
+          인천관광기업지원센터
+         </a>
+        </li>
+        <li>
+         <a href="http://visitincheon.or.kr/Smice/" tabindex="-1" target="_blank">
+          인천스마일플랫폼 스마트마이스
+         </a>
+        </li>
+        <li>
+         <a href="http://www.공감여행.com/" tabindex="-1" target="_blank">
+          인천장애인종합복지관 공감여행
+         </a>
+        </li>
+        <li class="footer_site_last1">
+         <a href="https://iq.ifac.or.kr/index.do" tabindex="-1" target="_blank">
+          인천문화큐 아이큐
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer_site">
+       <button class="btn" type="button">
+        연관사이트
+       </button>
+       <ul class="list">
+        <li>
+         <a href="https://www.ganghwa.go.kr/open_content/tour/" tabindex="-1" target="_blank">
+          인천 강화군 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.ongjin.go.kr/open_content/tour/" tabindex="-1" target="_blank">
+          인천 옹진군 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.icjg.go.kr/tour/index" tabindex="-1" target="_blank">
+          인천 중구 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.icdonggu.go.kr/tour/" tabindex="-1" target="_blank">
+          인천 동구 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.michuhol.go.kr/culture/main.do" tabindex="-1" target="_blank">
+          인천 미추홀구 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.yeonsu.go.kr/tour/" tabindex="-1" target="_blank">
+          인천 연수구 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.icbp.go.kr/tour" tabindex="-1" target="_blank">
+          인천 부평구 문화관광
+         </a>
+        </li>
+        <li>
+         <a href="https://www.gyeyang.go.kr/open_content/tour/" tabindex="-1" target="_blank">
+          인천 계양구 문화관광
+         </a>
+        </li>
+        <li class="footer_site_last1">
+         <a href="https://www.seo.incheon.kr/open_content/tour/" tabindex="-1" target="_blank">
+          인천 서구 문화관광
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <span class="wah_logo">
+      <a href="https://www.wa.or.kr/board/list.asp?search=total&amp;SearchString=%C0%CE%C3%B5%C5%F5%BE%EE&amp;BoardID=0006" target="_blank" title="새창">
+       <img alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)" src="/images/footer_webmark_2024.png"/>
+      </a>
+     </span>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
